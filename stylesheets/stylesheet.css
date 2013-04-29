@@ -185,10 +185,6 @@ hr {
   color: #b5e853;
 }
 
-p {
-	font-size: 16px;
-}
-
 /* Buttons
 */
 
@@ -249,3 +245,15 @@ a {
 .cf {
   zoom:1;
 }
+
+/* My customization */
+
+.post-section h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 14px;
+}
+
