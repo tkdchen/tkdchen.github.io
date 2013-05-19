@@ -26,15 +26,28 @@
 
     <div class="container">
         <div class="post-section">
-	<h1>失眠</h1>
+	<h1>给Python软件包打RPM包用的SPEC模板</h1>
 
-<p>写于2013年4月最后一天，凌晨3点。</p>
+<p>这个模板可作为为Python软件包制作RPM包的一个起点。它提供了能够成功完成一个RPM包的所有必要的信息。
+同时，预留了一些需要根据使用者的实际情况替换的信息。我使用了$var的格式来表明哪些需要用真实值来替
+换。</p>
 
-<p>失眠了。第一次这么严重的睡不着。我想，肯定是失眠了。身体躺在床上翻来覆去始终找不到一个舒服的入睡的姿势。脑子里跟过火车似的，满脑子都是事情。像泉水一样，往外冒。根本就不再自己的控制范围之内。现在在硬撑着敲这些字。脑袋发沉，倦意已浓，希望一会儿能尽快入睡。鼻炎不再影响今天的睡眠。第一次失眠了，让我学会了一个单词，<a href="http://cn.bing.com/dict/search?q=insomnia">insomnia</a>。</p>
+<p>模板遵循Fedora社区的RPM包打包规范。例如，Python软件包对应的RPM包通常加上<code>python-</code>前缀。
+如果你是在为一个django框架的扩展包打包，那么前缀应该使用<code>django-</code>。</p>
 
-<p>晚安！</p>
+<script src='https://gist.github.com/5607189.js?file='></script>
+
+
+<div><noscript><pre><code></code></pre></noscript></div>
+
 
 	<p>Tags:
+	
+	<a href="/tags.html#rpm">rpm</a>
+	
+	<a href="/tags.html#spec">spec</a>
+	
+	<a href="/tags.html#gist">gist</a>
 	
 	</p>
 	<div id="disqus_thread"></div>
