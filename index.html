@@ -3,29 +3,58 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>./echo X</title>
 
     <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print" />
+		<script src="javascripts/scale.fix.js"></script>
 
-    <title>./echo X</title>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-30955754-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
   </head>
 
   <body>
 
-    <header>
-      <div class="container">
-        <h1>echo X</h1>
-        <h2></h2>
+		<div class="wrapper">
+			<header>
+				<div class="container">
+					<h1 class="header">echo X</h1>
+					<p class="header"></p>
 
-        <section id="downloads">
-          <a href="https://github.com/tkdchen" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+					<ul>
+						<li><a class="buttons" href="http://weibo.com/tkdchen">微博</a></li>
+						<li><a class="buttons" href="http://www.flickr.com/photos/55770412@N08/">Photos</a></li>
+						<li><a class="buttons" href="https://github.com/tkdchen">Projects</a></li>
+						<li><a class="buttons" href="http://about.me/">About me</a></li>
+						<li><a class="buttons github" href="https://github.com/tkdchen/mysite">View On GitHub</a></li>
+					</ul>
 
-    <div class="container">
-        
+					<p class="header">Written in <a href="http://www.vim.org/">VIM</a></p>
+
+				</div>
+			</header>
+
+			<section>
+				<div class="container">
+						
 <div class="post-section">
 <h1>我的第一个Node软件包nsignal</h1>
 
@@ -58,13 +87,13 @@
 
 <p>几点感受。</p>
 
-<ul>
-<li>Javascript的简单性充分的体现到了软件包的分发上。一个带有充分信息的package.json是多么的重要。</li>
-<li>Javascript的简单性是极具欺骗性的。一旦你上了船，不久就会发现处处被埋伏。一不小心就踩下去。随处可见的回调处理，对传统的程序的顺序执行的思维逻辑形成挑战。当然，这同时也是非常有意思的，在你逐渐熟悉了这种行事方式后。幸好，Node社区的大牛门开发了<a href="https://github.com/caolan/async">async</a>这样一把神器。</li>
-<li>在Javascript中写面向对象的代码是多么的难受。很多探路者们已经为像我这样的后来者留下了丰富的、有价值的资产。Node的<code>utils.inherits</code>能够方便的实现类的继承概念。但是，千万不要用在Python、Java、c++里进行OOP经验完全搬到这里。</li>
-<li>基于事件的异步模型是现在炙手可热的编程方式，Python有<a href="http://gevent.org/">gevent</a>，Java、Scala、ruby都有各自的实现方案。而V8给予了node先天的能力。只要你开始在node中写Javascript，跑Javascript，你就在享受这种特性。期待更加完备的Javascript。</li>
-</ul>
+<p>Javascript的简单性充分的体现到了软件包的分发上。一个带有充分信息的package.json是多么的重要。</p>
 
+<p>Javascript的简单性是极具欺骗性的。一旦你上了船，不久就会发现处处被埋伏。一不小心就踩下去。随处可见的回调处理，对传统的程序的顺序执行的思维逻辑形成挑战。当然，这同时也是非常有意思的，在你逐渐熟悉了这种行事方式后。幸好，Node社区的大牛门开发了<a href="https://github.com/caolan/async">async</a>这样一把神器。</p>
+
+<p>在Javascript中写面向对象的代码是多么的难受。很多探路者们已经为像我这样的后来者留下了丰富的、有价值的资产。Node的<code>utils.inherits</code>能够方便的实现类的继承概念。但是，千万不要用在Python、Java、c++里进行OOP经验完全搬到这里。</p>
+
+<p>基于事件的异步模型是现在炙手可热的编程方式，Python有<a href="http://gevent.org/">gevent</a>，Java、Scala、ruby都有各自的实现方案。而V8给予了node先天的能力。只要你开始在node中写Javascript，跑Javascript，你就在享受这种特性。期待更加完备的Javascript。</p>
 
 <p>如果你正沉浸在时髦的Node和Javascript中，祝你好运气，少踩点坑。:)</p>
 
@@ -175,13 +204,15 @@
 </div>
 
 
-    </div>
+				</div>
+			</section>
 
-    <footer>
-      <div class="container">
-        &copy; Chenxiong Qi, 2013. Powered by <a href="https://github.com/mojombo/jekyll/" target="_blank">Jekyll</a>
-      </div>
-    </footer>
+			<footer>
+				<p>
+					&copy; Chenxiong Qi, 2013. Powered by <a href="https://github.com/mojombo/jekyll/" target="_blank">Jekyll</a>
+				</p>
+			</footer>
+		</div>
 
   </body>
 </html>
