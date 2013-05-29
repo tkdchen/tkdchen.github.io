@@ -256,7 +256,7 @@ header li {
 	list-style-type: none;
   width:132px;
   height:15px;
-	margin-bottom: 12px;
+	margin-bottom: 6px;
 	line-height: 1em;
 	padding: 6px 6px 6px 7px;
 
@@ -427,9 +427,17 @@ footer {
 
 .created-with-vim {
 	border: 0px;
+        margin: 3px;
+        padding: 0;
 }
 
 .post-section .read-more {
 	font-size: 12px;
 	text-align: right;
+}
+
+a.linkedin {
+	background: url(../images/linkedin-logo.png) no-repeat 1px;
+	/*background: url(../images/octocat-small.png) no-repeat 1px\9;*/
+	background-size: 14px auto;
 }
