@@ -42,7 +42,15 @@
 					<ul>
 						<li><a class="buttons" href="http://weibo.com/tkdchen">微博</a></li>
 						<li><a class="buttons" href="http://www.flickr.com/photos/55770412@N08/">Photos</a></li>
-						<li><a class="buttons" href="https://github.com/tkdchen">Projects</a></li>
+						<li><a class="buttons github" href="https://github.com/tkdchen">Projects@github</a></li>
+						<li><a class="buttons launchpad" href="https://github.com/tkdchen">Projects@launchpad</a></li>
+						<li>
+							<a class="buttons js-projects" href="#">Projects</a>
+							<ul style="display:none">
+								<li>github</li>
+								<li>launchpad</li>
+							</ul>
+						</li>
 						<li><a class="buttons linkedin" href="http://cn.linkedin.com/pub/chenxiong-qi/2b/a83/625/">LinkedIn</a></li>
 						<li><a class="buttons" href="http://about.me/">About me</a></li>
 						<li><a class="buttons github" href="https://github.com/tkdchen/mysite">View On GitHub</a></li>
@@ -165,8 +173,23 @@
   <h2><a name="javascript"></a>javascript</h2>
   <ul>
     
+      <li>2013-06-09:
+        <a href="/blog/2013/06/09/release-resource-from-backbone-object.html">及时释放Backbone对象占用的资源</a>
+      </li>
+    
       <li>2013-05-28:
         <a href="/blog/2013/05/28/first-nodejs-package.html">我的第一个Node软件包nsignal</a>
+      </li>
+    
+  </ul>
+</div>
+
+<div class="tag-section">
+  <h2><a name="backbone"></a>backbone</h2>
+  <ul>
+    
+      <li>2013-06-09:
+        <a href="/blog/2013/06/09/release-resource-from-backbone-object.html">及时释放Backbone对象占用的资源</a>
       </li>
     
   </ul>
@@ -185,6 +208,14 @@
 		</div>
 
 		<script type="text/javascript" src="javascripts/jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".js-projects").click(function() {
+					//$(event.target).find("ul").toggle();
+					console.log("###> event");
+				});
+			});
+		</script>
 
   </body>
 </html>
