@@ -425,6 +425,14 @@ footer {
 	font-size: 12px;
 }
 
+.wrapper .tag-section ul {
+	font-size: 16px;
+}
+
+.wrapper .post-section ul {
+	font-size: 16px;
+}
+
 .created-with-vim {
 	border: 0px;
         margin: 3px;
@@ -445,4 +453,15 @@ a.linkedin {
 a.launchpad {
 	background: url(../images/lp-logo.png) no-repeat 1px;
 	background-size: 14px auto;
+}
+
+.wrapper .project-list ul li {
+  list-style: none;
+  padding-left: 0;
+  display: inline;
+  margin-right: 12px;
+}
+
+.wrapper .project-list img {
+  border: 0;
 }
