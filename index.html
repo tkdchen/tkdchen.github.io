@@ -57,6 +57,34 @@
 						
 	<div class="post-section">
 		
+			<h1><a href="/blog/2013/06/19/rejectUnauthorized-changed.html">rejectUnauthorized的默认值变了</a></h1>
+			<p>这个变化发生在0.9.2版本中。下面的代码片段摘录自<a href="https://github.com/joyent/node/blob/v0.9.2-release/lib/tls.js">tls.js</a></p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">rejectUnauthorized</span><span class="o">:</span> <span class="s1">&#39;0&#39;</span> <span class="o">!==</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_TLS_REJECT_UNAUTHORIZED</span>
+<span class="p">};</span>
+</code></pre></div>
+
+
+<p>从与<a href="https://github.com/joyent/node/blob/v0.9.1-release/lib/tls.js">0.9.1</a>版本的对比来看，在新版本中，允许使用环境变量来控制参数<code>rejectUnauthorized</code>。上面的代码则使得默认值从<code>false</code>变更为<code>true</code>。在tls模块的文档中记录了这个变化，遗憾的是Node的Changelog则没有记录。</p>
+
+<p>为了确保代码能够在Node的各个版本间保持兼容性，在<code>options</code>参数中明确地给<code>rejectUnauthorized</code>设置所期望的值，而不使用默认值。</p>
+
+			<p class="read-more"><a href="/blog/2013/06/19/rejectUnauthorized-changed.html">Read More ...</a></p>
+		
+		<p>
+			Written on: 19 Jun 2013
+			<a href="/blog/2013/06/19/rejectUnauthorized-changed.html#disqus_thread">Comments</a> Tags:
+			
+			<a href="/tags.html#node">node</a>
+			
+			<a href="/tags.html#tls">tls</a>
+			
+		</p>
+	</div>
+
+	<div class="post-section">
+		
 			<h1><a href="/blog/2013/06/09/release-resource-from-backbone-object.html">及时释放Backbone对象占用的资源</a></h1>
 			<p><a href="http://backbonejs.org/">Backbone</a>对象？是的，此文中提到的Backbone对象指的就是View，Model和Collection。他们占用什么资源呢？在一个使用了Backbone、<a href="http://socket.io/">socket.io</a>和<a href="http://alogicalparadox.com/backbone.iobind/">ioBind</a>的项目中，会在DOM层、Model和Collection，以及socket三个层面注册大量的事件处理函数实现用户功能。这些事件监听就是最大的一个资源占用。不仅仅消耗内存，还会导致在反复创建同一个Model或者Collection的对象的情况下事件响应的泛滥。因此，在什么时候释放这些资源，以及如何释放非常值得关注。为了回答这两个问题，先通过代码来看看典型的应用方式。</p>
 
