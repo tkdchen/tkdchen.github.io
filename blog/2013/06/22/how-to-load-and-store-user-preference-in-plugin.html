@@ -49,6 +49,10 @@
 						<li><a class="buttons github" href="https://github.com/tkdchen/mysite">View On GitHub</a></li>
 					</ul>
 
+					<div class="subscription">
+						<a href="/feeds/all.xml"><img src="/images/rss.png" alt="RSS" /></a>
+					</div>
+
 				</div>
 			</header>
 
@@ -56,7 +60,7 @@
 				<div class="container">
 						<div class="post-section">
 	<div class="post-main-body">
-	<h1>如何在插件中读取和存储用户偏好数据</h1>
+	<h1>如何在GTG插件中读取和存储用户偏好数据</h1>
 
 <p>每一个插件都可以管理自己的用户偏好数据。这些数据存储在插件自己的配置目录中，彼此独立，互不影响。在GTG中，用户偏好数据被存储到一个字典对象中，使用pickel将其序列化到指定的文件中，此文件位于插件自己的专属目录中，其名称由开发者决定，并通过参数传递给用户偏好数据操作接口。插件API提供了两个方法用于读取和存储用户偏好数据，它们分别是<code>load_configuration_object</code> 和<code>save_configuration_object</code>，接口定义如下。</p>
 
@@ -71,7 +75,7 @@
 </code></pre></div>
 
 
-<p>这两个接口均接受插件名称（plugin_name）和文件名（filename）两个参数。GTG不提供默认的文件名。推荐使用名称<code>preference</code>。存储用户偏好数据的字典对象则传递给参数item。</p>
+<p>这两个接口均接受插件名称（plugin_name）和文件名（filename）两个参数。GTG不提供默认的文件名。推荐使用名称<code>preference</code>。存储用户偏好数据的字典对象传递给参数<code>item</code>。</p>
 
 <p>接口非常简单，写到这就可以结束了。Notification Area插件实现提供了很好的代码参考。</p>
 
@@ -107,7 +111,7 @@
 							type:'2',
 							count:'', /**是否显示分享数，1显示(可选)*/
 							appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
-							title:'如何在插件中读取和存储用户偏好数据', /**分享的文字内容(可选，默认为所在页面的title)*/
+							title:'如何在GTG插件中读取和存储用户偏好数据', /**分享的文字内容(可选，默认为所在页面的title)*/
 							pic:'', /**分享图片的路径(可选)*/
 							ralateUid:'', /**关联用户的UID，分享微博会@该用户(可选)*/
 							language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
@@ -125,7 +129,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="post-comment">
+	<div id="comments" class="post-comment">
 		<div id="disqus_thread"></div>
 		<script type="text/javascript">
 				/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
