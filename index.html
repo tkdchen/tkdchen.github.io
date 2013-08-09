@@ -61,24 +61,43 @@
 						
 	<div class="post-section">
 		
+			<h1><a href="/blog/2013/08/09/how-to-request-personal-credit-report.html">如何查询个人信用记录</a></h1>
+			<p>查询个人信用记录非常方便。这篇文章以我个人查询本人信用记录的经历为参照，给你提供一个快捷的参考。如果你是查询自己的信用记录，那么按照下面的步骤即可轻松完成。</p>
+
+<ul>
+<li>仔细阅读申请流程。到<a href='http://www.pbccrc.org.cn/'>中国人民银行征信中心</a>网站，仔细阅读<a href='http://www.pbccrc.org.cn/kefuzhongxin_301.html'>本人查询信用报告流程</a>。</li>
+
+<li>下载个人信用报告本人查询申请表。在本人查询信用报告流程的页面中，下载<a href='http://file.pbccrc.org.cn/files/个人信用报告本人查询申请表.doc'>个人信用报告本人查询申请表</a>。填好里面相关的所有信息。别忘了签字。</li>
+
+<li>去中国人民银行营业管理部办理查询。办理查询需要携带本人的身份证和身份证的正反面复印件。如果你填写了那个申请表，也一并带着。地址在网站首页的顶部已经给出。坐地铁的话，6号线在车公庄西站出，沿展览馆路往南，过两个有红绿灯的路口就能到了。就在路边上，一眼就能看到。</li>
+</ul>
+			<p class="read-more"><a href="/blog/2013/08/09/how-to-request-personal-credit-report.html">Read More ...</a></p>
+		
+		<p>
+			Written on: 09 Aug 2013
+			<a href="/blog/2013/08/09/how-to-request-personal-credit-report.html#comments">Comments</a> Tags:
+			
+			<a href="/tags.html#life">life</a>
+			
+		</p>
+	</div>
+
+	<div class="post-section">
+		
 			<h1><a href="/blog/2013/06/22/how-to-load-and-store-user-preference-in-plugin.html">如何在GTG插件中读取和存储用户偏好数据</a></h1>
 			<p>每一个插件都可以管理自己的用户偏好数据。这些数据存储在插件自己的配置目录中，彼此独立，互不影响。在GTG中，用户偏好数据被存储到一个字典对象中，使用pickel将其序列化到指定的文件中，此文件位于插件自己的专属目录中，其名称由开发者决定，并通过参数传递给用户偏好数据操作接口。插件API提供了两个方法用于读取和存储用户偏好数据，它们分别是<code>load_configuration_object</code> 和<code>save_configuration_object</code>，接口定义如下。</p>
+<div class='highlight'><pre><code class='python'><span class='k'>def</span> <span class='nf'>load_configuration_object</span><span class='p'>(</span><span class='bp'>self</span><span class='p'>,</span> <span class='n'>plugin_name</span><span class='p'>,</span> <span class='n'>filename</span><span class='p'>,</span>
+                              <span class='n'>basedir</span><span class='o'>=</span><span class='n'>xdg_config_home</span><span class='p'>,</span>
+                              <span class='n'>default_values</span><span class='o'>=</span><span class='bp'>None</span><span class='p'>):</span>
+    <span class='sd'>&#39;&#39;&#39;Load preference&#39;&#39;&#39;</span>
 
-<div class="highlight"><pre><code class="python"><span class="k">def</span> <span class="nf">load_configuration_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plugin_name</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span>
-                              <span class="n">basedir</span><span class="o">=</span><span class="n">xdg_config_home</span><span class="p">,</span>
-                              <span class="n">default_values</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;Load preference&#39;&#39;&#39;</span>
-
-<span class="k">def</span> <span class="nf">save_configuration_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plugin_name</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span>
-                              <span class="n">basedir</span><span class="o">=</span><span class="n">xdg_config_home</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;Store preference&#39;&#39;&#39;</span>
+<span class='k'>def</span> <span class='nf'>save_configuration_object</span><span class='p'>(</span><span class='bp'>self</span><span class='p'>,</span> <span class='n'>plugin_name</span><span class='p'>,</span> <span class='n'>filename</span><span class='p'>,</span> <span class='n'>item</span><span class='p'>,</span>
+                              <span class='n'>basedir</span><span class='o'>=</span><span class='n'>xdg_config_home</span><span class='p'>):</span>
+    <span class='sd'>&#39;&#39;&#39;Store preference&#39;&#39;&#39;</span>
 </code></pre></div>
-
-
 <p>这两个接口均接受插件名称（plugin_name）和文件名（filename）两个参数。GTG不提供默认的文件名。推荐使用名称<code>preference</code>。存储用户偏好数据的字典对象传递给参数<code>item</code>。</p>
 
 <p>接口非常简单，写到这就可以结束了。Notification Area插件实现提供了很好的代码参考。</p>
-
 			<p class="read-more"><a href="/blog/2013/06/22/how-to-load-and-store-user-preference-in-plugin.html">Read More ...</a></p>
 		
 		<p>
@@ -95,18 +114,14 @@
 	<div class="post-section">
 		
 			<h1><a href="/blog/2013/06/19/rejectUnauthorized-changed.html">rejectUnauthorized的默认值变了</a></h1>
-			<p>这个变化发生在0.9.2版本中。下面的代码片段摘录自<a href="https://github.com/joyent/node/blob/v0.9.2-release/lib/tls.js">tls.js</a></p>
-
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">rejectUnauthorized</span><span class="o">:</span> <span class="s1">&#39;0&#39;</span> <span class="o">!==</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_TLS_REJECT_UNAUTHORIZED</span>
-<span class="p">};</span>
+			<p>这个变化发生在0.9.2版本中。下面的代码片段摘录自<a href='https://github.com/joyent/node/blob/v0.9.2-release/lib/tls.js'>tls.js</a></p>
+<div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>defaults</span> <span class='o'>=</span> <span class='p'>{</span>
+  <span class='nx'>rejectUnauthorized</span><span class='o'>:</span> <span class='s1'>&#39;0&#39;</span> <span class='o'>!==</span> <span class='nx'>process</span><span class='p'>.</span><span class='nx'>env</span><span class='p'>.</span><span class='nx'>NODE_TLS_REJECT_UNAUTHORIZED</span>
+<span class='p'>};</span>
 </code></pre></div>
-
-
-<p>从与<a href="https://github.com/joyent/node/blob/v0.9.1-release/lib/tls.js">0.9.1</a>版本的对比来看，在新版本中，允许使用环境变量来控制参数<code>rejectUnauthorized</code>。上面的代码则使得默认值从<code>false</code>变更为<code>true</code>。在tls模块的文档中记录了这个变化，遗憾的是Node的Changelog则没有记录。</p>
+<p>从与<a href='https://github.com/joyent/node/blob/v0.9.1-release/lib/tls.js'>0.9.1</a>版本的对比来看，在新版本中，允许使用环境变量来控制参数<code>rejectUnauthorized</code>。上面的代码则使得默认值从<code>false</code>变更为<code>true</code>。在tls模块的文档中记录了这个变化，遗憾的是Node的Changelog则没有记录。</p>
 
 <p>为了确保代码能够在Node的各个版本间保持兼容性，在<code>options</code>参数中明确地给<code>rejectUnauthorized</code>设置所期望的值，而不使用默认值。</p>
-
 			<p class="read-more"><a href="/blog/2013/06/19/rejectUnauthorized-changed.html">Read More ...</a></p>
 		
 		<p>
@@ -123,68 +138,63 @@
 	<div class="post-section">
 		
 			<h1><a href="/blog/2013/06/09/release-resource-from-backbone-object.html">及时释放Backbone对象占用的资源</a></h1>
-			<p><a href="http://backbonejs.org/">Backbone</a>对象？是的，此文中提到的Backbone对象指的就是View，Model和Collection。他们占用什么资源呢？在一个使用了Backbone、<a href="http://socket.io/">socket.io</a>和<a href="http://alogicalparadox.com/backbone.iobind/">ioBind</a>的项目中，会在DOM层、Model和Collection，以及socket三个层面注册大量的事件处理函数实现用户功能。这些事件监听就是最大的一个资源占用。不仅仅消耗内存，还会导致在反复创建同一个Model或者Collection的对象的情况下事件响应的泛滥。因此，在什么时候释放这些资源，以及如何释放非常值得关注。为了回答这两个问题，先通过代码来看看典型的应用方式。</p>
+			<p><a href='http://backbonejs.org/'>Backbone</a>对象？是的，此文中提到的Backbone对象指的就是View，Model和Collection。他们占用什么资源呢？在一个使用了Backbone、<a href='http://socket.io/'>socket.io</a>和<a href='http://alogicalparadox.com/backbone.iobind/'>ioBind</a>的项目中，会在DOM层、Model和Collection，以及socket三个层面注册大量的事件处理函数实现用户功能。这些事件监听就是最大的一个资源占用。不仅仅消耗内存，还会导致在反复创建同一个Model或者Collection的对象的情况下事件响应的泛滥。因此，在什么时候释放这些资源，以及如何释放非常值得关注。为了回答这两个问题，先通过代码来看看典型的应用方式。</p>
+<div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>BaseModel</span> <span class='o'>=</span> <span class='nx'>Backbone</span><span class='p'>.</span><span class='nx'>Model</span><span class='p'>.</span><span class='nx'>extend</span><span class='p'>({</span>
+  <span class='nx'>idAttribute</span><span class='o'>:</span> <span class='s2'>&quot;_id&quot;</span><span class='p'>,</span>
+  <span class='nx'>socket</span><span class='o'>:</span> <span class='nb'>window</span><span class='p'>.</span><span class='nx'>socket</span><span class='p'>,</span>
+  <span class='nx'>urlRoot</span><span class='o'>:</span> <span class='kc'>undefined</span><span class='p'>,</span>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">BaseModel</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">idAttribute</span><span class="o">:</span> <span class="s2">&quot;_id&quot;</span><span class="p">,</span>
-  <span class="nx">socket</span><span class="o">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">socket</span><span class="p">,</span>
-  <span class="nx">urlRoot</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
+  <span class='nx'>url</span><span class='o'>:</span> <span class='kd'>function</span><span class='p'>()</span> <span class='p'>{</span>
+    <span class='k'>return</span> <span class='s2'>&quot;/&quot;</span> <span class='o'>+</span> <span class='k'>this</span><span class='p'>.</span><span class='nx'>urlRoot</span> <span class='o'>+</span> <span class='s2'>&quot;/&quot;</span> <span class='o'>+</span> <span class='k'>this</span><span class='p'>.</span><span class='nx'>id</span><span class='p'>;</span>
+  <span class='p'>},</span>
 
-  <span class="nx">url</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">urlRoot</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
-  <span class="p">},</span>
+  <span class='nx'>initialize</span><span class='o'>:</span> <span class='kd'>function</span> <span class='p'>(</span><span class='nx'>attributes</span><span class='p'>,</span> <span class='nx'>options</span><span class='p'>)</span> <span class='p'>{</span>
+    <span class='k'>this</span><span class='p'>.</span><span class='nx'>on</span><span class='p'>(</span><span class='s1'>&#39;modelCleanup&#39;</span><span class='p'>,</span> <span class='k'>this</span><span class='p'>.</span><span class='nx'>modelCleanup</span><span class='p'>,</span> <span class='k'>this</span><span class='p'>);</span>
+    <span class='k'>this</span><span class='p'>.</span><span class='nx'>ioBind</span><span class='p'>(</span><span class='s1'>&#39;update&#39;</span><span class='p'>,</span> <span class='k'>this</span><span class='p'>.</span><span class='nx'>serverChange</span><span class='p'>,</span> <span class='k'>this</span><span class='p'>);</span>
+    <span class='k'>this</span><span class='p'>.</span><span class='nx'>ioBind</span><span class='p'>(</span><span class='s1'>&#39;delete&#39;</span><span class='p'>,</span> <span class='k'>this</span><span class='p'>.</span><span class='nx'>serverDelete</span><span class='p'>,</span> <span class='k'>this</span><span class='p'>);</span>
+  <span class='p'>},</span>
 
-  <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">attributes</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;modelCleanup&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">modelCleanup</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">ioBind</span><span class="p">(</span><span class="s1">&#39;update&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">serverChange</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">ioBind</span><span class="p">(</span><span class="s1">&#39;delete&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">serverDelete</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-  <span class="p">},</span>
+  <span class='nx'>serverChange</span><span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span><span class='nx'>data</span><span class='p'>)</span> <span class='p'>{}</span>
+  <span class='nx'>serverDelete</span><span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span><span class='nx'>data</span><span class='p'>)</span> <span class='p'>{}</span>
+  <span class='nx'>modelCleanup</span><span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span><span class='nx'>data</span><span class='p'>)</span> <span class='p'>{}</span>
+<span class='p'>});</span>
 
-  <span class="nx">serverChange</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
-  <span class="nx">serverDelete</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
-  <span class="nx">modelCleanup</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
-<span class="p">});</span>
+<span class='kd'>var</span> <span class='nx'>Checklist</span> <span class='o'>=</span> <span class='nx'>BaseModel</span><span class='p'>.</span><span class='nx'>extend</span><span class='p'>({</span>
+  <span class='nx'>urlRoot</span><span class='o'>:</span> <span class='s2'>&quot;checklist&quot;</span><span class='p'>,</span>
 
-<span class="kd">var</span> <span class="nx">Checklist</span> <span class="o">=</span> <span class="nx">BaseModel</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">urlRoot</span><span class="o">:</span> <span class="s2">&quot;checklist&quot;</span><span class="p">,</span>
+  <span class='nx'>initialize</span><span class='o'>:</span> <span class='kd'>function</span> <span class='p'>(</span><span class='nx'>attributes</span><span class='p'>,</span> <span class='nx'>options</span><span class='p'>)</span> <span class='p'>{</span>
+    <span class='k'>this</span><span class='p'>.</span><span class='nx'>itemCollection</span> <span class='o'>=</span> <span class='k'>new</span> <span class='nx'>ChecklistItemCollection</span><span class='p'>;</span>
+    <span class='nx'>BaseModel</span><span class='p'>.</span><span class='nx'>prototype</span><span class='p'>.</span><span class='nx'>initialize</span><span class='p'>.</span><span class='nx'>apply</span><span class='p'>(</span><span class='k'>this</span><span class='p'>,</span> <span class='nx'>arguments</span><span class='p'>);</span>
+  <span class='p'>}</span>
+<span class='p'>});</span>
 
-  <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">attributes</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">itemCollection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChecklistItemCollection</span><span class="p">;</span>
-    <span class="nx">BaseModel</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">initialize</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">});</span>
+<span class='kd'>var</span> <span class='nx'>ChecklistItem</span> <span class='o'>=</span> <span class='nx'>Backbone</span><span class='p'>.</span><span class='nx'>Model</span><span class='p'>.</span><span class='nx'>extend</span><span class='p'>({</span>
+  <span class='nx'>urlRoot</span><span class='o'>:</span> <span class='s2'>&quot;checklistitem&quot;</span>
+<span class='p'>});</span>
 
-<span class="kd">var</span> <span class="nx">ChecklistItem</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">urlRoot</span><span class="o">:</span> <span class="s2">&quot;checklistitem&quot;</span>
-<span class="p">});</span>
+<span class='kd'>var</span> <span class='nx'>BaseCollection</span> <span class='o'>=</span> <span class='nx'>Backbone</span><span class='p'>.</span><span class='nx'>Collection</span><span class='p'>.</span><span class='nx'>extend</span><span class='p'>({</span>
+  <span class='nx'>url</span><span class='o'>:</span> <span class='kc'>undefined</span><span class='p'>,</span>
+  <span class='nx'>model</span><span class='o'>:</span> <span class='kc'>undefined</span><span class='p'>,</span>
+  <span class='nx'>socket</span><span class='o'>:</span> <span class='nb'>window</span><span class='p'>.</span><span class='nx'>socket</span><span class='p'>,</span>
 
-<span class="kd">var</span> <span class="nx">BaseCollection</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">url</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
-  <span class="nx">model</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
-  <span class="nx">socket</span><span class="o">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">socket</span><span class="p">,</span>
+  <span class='nx'>initialize</span><span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span><span class='nx'>models</span><span class='p'>,</span> <span class='nx'>options</span><span class='p'>)</span> <span class='p'>{</span>
+    <span class='nx'>_</span><span class='p'>.</span><span class='nx'>bindAll</span><span class='p'>(</span><span class='k'>this</span><span class='p'>,</span> <span class='s2'>&quot;serverCreate&quot;</span><span class='p'>);</span>
+    <span class='k'>this</span><span class='p'>.</span><span class='nx'>ioBind</span><span class='p'>(</span><span class='s2'>&quot;create&quot;</span><span class='p'>,</span> <span class='k'>this</span><span class='p'>.</span><span class='nx'>socket</span><span class='p'>,</span> <span class='k'>this</span><span class='p'>.</span><span class='nx'>serverCreate</span><span class='p'>,</span> <span class='k'>this</span><span class='p'>);</span>
+  <span class='p'>},</span>
 
-  <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">models</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">_</span><span class="p">.</span><span class="nx">bindAll</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s2">&quot;serverCreate&quot;</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">ioBind</span><span class="p">(</span><span class="s2">&quot;create&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">socket</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">serverCreate</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-  <span class="p">},</span>
+  <span class='nx'>serverCreate</span><span class='o'>:</span> <span class='kd'>function</span><span class='p'>(</span><span class='nx'>data</span><span class='p'>)</span> <span class='p'>{}</span>
+<span class='p'>});</span>
 
-  <span class="nx">serverCreate</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
-<span class="p">});</span>
+<span class='kd'>var</span> <span class='nx'>ChecklistCollection</span> <span class='o'>=</span> <span class='nx'>BaseCollection</span><span class='p'>.</span><span class='nx'>extend</span><span class='p'>({</span>
+  <span class='nx'>url</span><span class='o'>:</span> <span class='s2'>&quot;/checklist&quot;</span><span class='p'>,</span>
+  <span class='nx'>model</span><span class='o'>:</span> <span class='nx'>Checklist</span>
+<span class='p'>});</span>
 
-<span class="kd">var</span> <span class="nx">ChecklistCollection</span> <span class="o">=</span> <span class="nx">BaseCollection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/checklist&quot;</span><span class="p">,</span>
-  <span class="nx">model</span><span class="o">:</span> <span class="nx">Checklist</span>
-<span class="p">});</span>
-
-<span class="kd">var</span> <span class="nx">ChecklistItemCollection</span> <span class="o">=</span> <span class="nx">BaseCollection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/checklistitem&quot;</span><span class="p">,</span>
-  <span class="nx">model</span><span class="o">:</span> <span class="nx">ChecklistItem</span>
-<span class="p">});</span>
+<span class='kd'>var</span> <span class='nx'>ChecklistItemCollection</span> <span class='o'>=</span> <span class='nx'>BaseCollection</span><span class='p'>.</span><span class='nx'>extend</span><span class='p'>({</span>
+  <span class='nx'>url</span><span class='o'>:</span> <span class='s2'>&quot;/checklistitem&quot;</span><span class='p'>,</span>
+  <span class='nx'>model</span><span class='o'>:</span> <span class='nx'>ChecklistItem</span>
+<span class='p'>});</span>
 </code></pre></div>
-
-
-
-
 			<p class="read-more"><a href="/blog/2013/06/09/release-resource-from-backbone-object.html">Read More ...</a></p>
 		
 		<p>
@@ -205,13 +215,11 @@
 
 <p>用Javascript写程序已经有段时间了。在Node的环境下，Javascript充分发挥了起长期以来被忽视的强大力量。随着写的Javascript代码越来越多，对这门语言有了更加深入的理解。与此同时，在不断地使用和阅读第三方Node软件包的过程中，越发的感觉到Javascript的潜力无限和未来发展的各种无限可能。你愿意使用Javascirpt写日常的脚本程序吗，写GUI程序吗，开发网络应用吗？</p>
 
-<p>今天花了一点时间，把目前项目中的一个简单的组件剥离了出来，把它放到了<a href="https://github.com/tkdchen/nsignal">github</a>上，同时也快速体验了一把Node软件包分发。</p>
+<p>今天花了一点时间，把目前项目中的一个简单的组件剥离了出来，把它放到了<a href='https://github.com/tkdchen/nsignal'>github</a>上，同时也快速体验了一把Node软件包分发。</p>
 
 <p>使用下面的命令从Node软件仓库npm中的安装，</p>
 
-<pre><code>npm install nsignal
-</code></pre>
-
+<pre><code>npm install nsignal</code></pre>
 			<p class="read-more"><a href="/blog/2013/05/28/first-nodejs-package.html">Read More ...</a></p>
 		
 		<p>
@@ -232,13 +240,9 @@
 	<div class="post-section">
 		
 			<h1><a href="/blog/2013/05/19/rpm-spec-for-python-gist.html">给Python软件包打RPM包用的SPEC模板</a></h1>
-			<p>这个模板可作为为Python软件包制作RPM包的一个起点。它提供了能够成功完成一个RPM包的所有必要的信息。
-同时，预留了一些需要根据使用者的实际情况替换的信息。我使用了$var的格式来表明哪些需要用真实值来替
-换。</p>
+			<p>这个模板可作为为Python软件包制作RPM包的一个起点。它提供了能够成功完成一个RPM包的所有必要的信息。 同时，预留了一些需要根据使用者的实际情况替换的信息。我使用了$var的格式来表明哪些需要用真实值来替 换。</p>
 
-<p>模板遵循Fedora社区的RPM包打包规范。例如，Python软件包对应的RPM包通常加上<code>python-</code>前缀。
-如果你是在为一个django框架的扩展包打包，那么前缀应该使用<code>django-</code>。</p>
-
+<p>模板遵循Fedora社区的RPM包打包规范。例如，Python软件包对应的RPM包通常加上<code>python-</code>前缀。 如果你是在为一个django框架的扩展包打包，那么前缀应该使用<code>django-</code>。</p>
 			<p class="read-more"><a href="/blog/2013/05/19/rpm-spec-for-python-gist.html">Read More ...</a></p>
 		
 		<p>
@@ -256,14 +260,11 @@
 
 	<div class="post-section">
 		
-			<h1>跟家还得带着口罩</h1>
+			<h1 id='id2'>跟家还得带着口罩</h1>
 
-<p>春暖花开，满世界生机勃勃。但也是我一年中，鼻子最痛苦的时候。这个时候出个门如果口罩，
-就得备一卷卫生纸。甚至跟家还得带着点口罩，因为要开窗通风。如果要去个植物园那样的地方，
-口罩可是我的神啊。</p>
+<p>春暖花开，满世界生机勃勃。但也是我一年中，鼻子最痛苦的时候。这个时候出个门如果口罩， 就得备一卷卫生纸。甚至跟家还得带着点口罩，因为要开窗通风。如果要去个植物园那样的地方， 口罩可是我的神啊。</p>
 
-<p><img src="http://farm9.staticflickr.com/8540/8694526863_198ea71813_z.jpg" alt="Wearing Mask" /></p>
-
+<p><img alt='Wearing Mask' src='http://farm9.staticflickr.com/8540/8694526863_198ea71813_z.jpg' /></p>
 		
 		<p>
 			Written on: 30 Apr 2013
@@ -276,14 +277,13 @@
 
 	<div class="post-section">
 		
-			<h1>失眠</h1>
+			<h1 id='id1'>失眠</h1>
 
 <p>写于2013年4月最后一天，凌晨3点。</p>
 
-<p>失眠了。第一次这么严重的睡不着。我想，肯定是失眠了。身体躺在床上翻来覆去始终找不到一个舒服的入睡的姿势。脑子里跟过火车似的，满脑子都是事情。像泉水一样，往外冒。根本就不再自己的控制范围之内。现在在硬撑着敲这些字。脑袋发沉，倦意已浓，希望一会儿能尽快入睡。鼻炎不再影响今天的睡眠。第一次失眠了，让我学会了一个单词，<a href="http://cn.bing.com/dict/search?q=insomnia">insomnia</a>。</p>
+<p>失眠了。第一次这么严重的睡不着。我想，肯定是失眠了。身体躺在床上翻来覆去始终找不到一个舒服的入睡的姿势。脑子里跟过火车似的，满脑子都是事情。像泉水一样，往外冒。根本就不再自己的控制范围之内。现在在硬撑着敲这些字。脑袋发沉，倦意已浓，希望一会儿能尽快入睡。鼻炎不再影响今天的睡眠。第一次失眠了，让我学会了一个单词，<a href='http://cn.bing.com/dict/search?q=insomnia'>insomnia</a>。</p>
 
 <p>晚安！</p>
-
 		
 		<p>
 			Written on: 30 Apr 2013
@@ -297,10 +297,7 @@
 			<h1><a href="/essay/2013/04/30/00-pages-with-jekyll-is-ready.html">开始用jekyll在Github Pages上写东西</a></h1>
 			<p>写于2013年4月最后一天凌晨</p>
 
-<p>经过一个下午的尝试，终于把jekyll搞定。熟悉jekyll的使用方法后，发布文章会变得非常轻松。没有什么更多的可说的了。Github的发展方向让人充满想象。任
-何可以用git管理的东西都可以在Github上托管。以至于可以遇见的到，任何我想要与他人分享的内容都可以借助于这个公共的平台。内容管理完全自足，自由，没有任
-何限制。只不过，发布之前自己的先做好审核。否则，一不小心你的小秘密就公之于众了。</p>
-
+<p>经过一个下午的尝试，终于把jekyll搞定。熟悉jekyll的使用方法后，发布文章会变得非常轻松。没有什么更多的可说的了。Github的发展方向让人充满想象。任 何可以用git管理的东西都可以在Github上托管。以至于可以遇见的到，任何我想要与他人分享的内容都可以借助于这个公共的平台。内容管理完全自足，自由，没有任 何限制。只不过，发布之前自己的先做好审核。否则，一不小心你的小秘密就公之于众了。</p>
 			<p class="read-more"><a href="/essay/2013/04/30/00-pages-with-jekyll-is-ready.html">Read More ...</a></p>
 		
 		<p>
