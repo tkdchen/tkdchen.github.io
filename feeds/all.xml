@@ -7,12 +7,32 @@
       <language>zh-CN</language>
       <copyright>Copyright 2013, Chenxiong Qi</copyright>
       
-      <pubDate>Tue, 27 Aug 2013 00:00:00 +0800</pubDate>
-      <lastBuildDate>Tue, 27 Aug 2013 00:00:00 +0800</lastBuildDate>
+      <pubDate>Wed, 04 Sep 2013 00:00:00 +0800</pubDate>
+      <lastBuildDate>Wed, 04 Sep 2013 00:00:00 +0800</lastBuildDate>
       
       <generator>jekyll</generator>
       <managingEditor>qcxhome@gmail.com (Chenxiong Qi)</managingEditor>
       <webMaster>qcxhome@gmail.com (Chenxiong Qi)</webMaster>
+      
+      <item>
+        <title>这个函数定义会让你抓狂吗？</title>
+        <author>qcxhome@gmail.com</author>
+        <pubDate>Wed, 04 Sep 2013 00:00:00 +0800</pubDate>
+        <link>http://tkdchen.me/blog/2013/09/04/does-this-make-you-crazy.html</link>
+        <guid isPermaLink="true">http://tkdchen.me/blog/2013/09/04/does-this-make-you-crazy.html</guid>
+        <comments>http://tkdchen.me/blog/2013/09/04/does-this-make-you-crazy.html#comments</comments>
+        <description><![CDATA[ <p>这个函数定义是从<a href="https://github.com/openSUSE/libsolv">libsolv</a>中看到的。当你看到它的时候，会有中抓狂的感觉吗？</p>
+
+<div class="highlight"><pre><code class="c++"><span class="kt">char</span><span class="o">*</span>
+<span class="nf">pool_tmpjoin</span><span class="p">(</span><span class="n">Pool</span> <span class="o">*</span><span class="n">pool</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str3</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>str[1..3]这三个参数是干什么用的，传什么参数，函数连个注释都没有。我去，不得不从代码里面找答案。</p>
+ ]]></description>
+      </item>
       
       <item>
         <title>在Mac OS里安装QT</title>
@@ -21,9 +41,7 @@
         <link>http://tkdchen.me/blog/2013/08/27/installing-qt-in-macos.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/08/27/installing-qt-in-macos.html</guid>
         <comments>http://tkdchen.me/blog/2013/08/27/installing-qt-in-macos.html#comments</comments>
-        <description><![CDATA[ <h1>在Mac OS里安装QT</h1>
-
-<p>这是很简单的一篇记录文章。偶然间在reddit中看到了一个回复，提到QT的跨平台特性优于GTK+。由此忽然间想到，前段时间在Mac上编译安装GTK+是多么麻烦的一件事情。虽然不复杂，但还是费了不少周折。于是，搜索到QT官方文档，详细的描述了如何在Mac中安装QT。有点小兴奋。凡事怕比较。QT的优势又一次显现出来。无外乎两个步骤，而且都是常规的UNIX软件包安装方法。第一步，<code>./configure &amp;&amp; make &amp;&amp; make install</code>。第二步，设置环境变量。</p>
+        <description><![CDATA[ <p>这是很简单的一篇记录文章。偶然间在reddit中看到了一个回复，提到QT的跨平台特性优于GTK+。由此忽然间想到，前段时间在Mac上编译安装GTK+是多么麻烦的一件事情。虽然不复杂，但还是费了不少周折。于是，搜索到QT官方文档，详细的描述了如何在Mac中安装QT。有点小兴奋。凡事怕比较。QT的优势又一次显现出来。无外乎两个步骤，而且都是常规的UNIX软件包安装方法。第一步，<code>./configure &amp;&amp; make &amp;&amp; make install</code>。第二步，设置环境变量。</p>
 
 <p>详细的内容您自个儿瞧吧，:) 《<a href="http://qt-project.org/doc/qt-4.8/install-mac.html">Installing Qt for Mac OS</a>》</p>
  ]]></description>
@@ -36,9 +54,7 @@
         <link>http://tkdchen.me/blog/2013/08/26/my-python-code-might-not-be-scored-10-10-by-pylint.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/08/26/my-python-code-might-not-be-scored-10-10-by-pylint.html</guid>
         <comments>http://tkdchen.me/blog/2013/08/26/my-python-code-might-not-be-scored-10-10-by-pylint.html#comments</comments>
-        <description><![CDATA[ <h1>我的Python代码或许在多数时候都得不了100分</h1>
-
-<p>在Python社区中，开发人员能够使用<a href="https://pypi.python.org/pypi/pep8">pep8</a>，<a href="https://pypi.python.org/pypi/pyflakes">pyflakes</a>和<a href="http://www.pylint.org">pylint</a>来检查自己的代码是否符合<a href="http://www.python.org/dev/peps/pep-0008/">PEP8所描述的指导规范</a>，同时还能够检查出来哪些变量是我们定义了，但是没有用到的，等等。在这些工具中，pylint无非是（似乎是）最受社区推崇的一个。OpenStack使用它做代码检查，Sonar除了支持自己默认的检查规则外，也就只支持pylint了。</p>
+        <description><![CDATA[ <p>在Python社区中，开发人员能够使用<a href="https://pypi.python.org/pypi/pep8">pep8</a>，<a href="https://pypi.python.org/pypi/pyflakes">pyflakes</a>和<a href="http://www.pylint.org">pylint</a>来检查自己的代码是否符合<a href="http://www.python.org/dev/peps/pep-0008/">PEP8所描述的指导规范</a>，同时还能够检查出来哪些变量是我们定义了，但是没有用到的，等等。在这些工具中，pylint无非是（似乎是）最受社区推崇的一个。OpenStack使用它做代码检查，Sonar除了支持自己默认的检查规则外，也就只支持pylint了。</p>
 
 <p>话说pylint功能强大，在默认配置的控制下，它检查Python代码的方方面面。最后得到的评分也许会让自己大跌眼镜。我第一次用的时候就是这个感受。难道我写代码的水平这么差劲吗？！:)</p>
 
@@ -65,9 +81,7 @@
         <link>http://tkdchen.me/blog/2013/08/24/using-gnucash-to-manage-personal-finance.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/08/24/using-gnucash-to-manage-personal-finance.html</guid>
         <comments>http://tkdchen.me/blog/2013/08/24/using-gnucash-to-manage-personal-finance.html#comments</comments>
-        <description><![CDATA[ <h1>用GnuCash管理个人财务数据</h1>
-
-<p>生活不易，工作不易，为了生活赚钱更不易。在日常的生活中，有必要对我们的收入和支出有比较清晰的跟踪。个中目的，相信每个人都有自己的打算。收支平衡很重要。对于我来说，对自己财务数据的管理的目的，无非就是在有限的收入中，能够对其有所规划，在保持一定生活水平的同时，也能够留出适当的一部分做投资、做保险等等，为未来的生活做准备。</p>
+        <description><![CDATA[ <p>生活不易，工作不易，为了生活赚钱更不易。在日常的生活中，有必要对我们的收入和支出有比较清晰的跟踪。个中目的，相信每个人都有自己的打算。收支平衡很重要。对于我来说，对自己财务数据的管理的目的，无非就是在有限的收入中，能够对其有所规划，在保持一定生活水平的同时，也能够留出适当的一部分做投资、做保险等等，为未来的生活做准备。</p>
 
 <p>国外的金融危机让很多外国人都已经开始重新审视自己的消费观。有计划的，节省不必要的开支成为他们的财务管理过程中很重要的一部分。从<a href="http://lifehacker.com">lifehacker</a>站点的有关财务管理的文章中能看到某些端倪。对此我必须要做一点声明，我没有在西方社会生活的经历，并不是非常了解西方社会普遍的消费观念。我是通过新闻媒体的报道，以及阅读一些文章后了解到的信息。某些人在某种程度上所崇拜和学习的，西方式的超前的、看似很前卫的消费方式，其实并不是认为的那样。他们也很精打细算。</p>
 
@@ -94,9 +108,7 @@
         <link>http://tkdchen.me/blog/2013/08/09/how-to-request-personal-credit-report.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/08/09/how-to-request-personal-credit-report.html</guid>
         <comments>http://tkdchen.me/blog/2013/08/09/how-to-request-personal-credit-report.html#comments</comments>
-        <description><![CDATA[ <h1>如何查询个人信用记录</h1>
-
-<p>查询个人信用记录非常方便。这篇文章以我个人查询本人信用记录的经历为参照，给你提供一个快捷的参考。如果你是查询自己的信用记录，那么按照下面的步骤即可轻松完成。</p>
+        <description><![CDATA[ <p>查询个人信用记录非常方便。这篇文章以我个人查询本人信用记录的经历为参照，给你提供一个快捷的参考。如果你是查询自己的信用记录，那么按照下面的步骤即可轻松完成。</p>
 
 <ul>
 <li>仔细阅读申请流程。到<a href="http://www.pbccrc.org.cn/">中国人民银行征信中心</a>网站，仔细阅读<a href="http://www.pbccrc.org.cn/kefuzhongxin_301.html">本人查询信用报告流程</a>。</li>
@@ -148,9 +160,7 @@
         <link>http://tkdchen.me/blog/2013/06/19/rejectUnauthorized-changed.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/06/19/rejectUnauthorized-changed.html</guid>
         <comments>http://tkdchen.me/blog/2013/06/19/rejectUnauthorized-changed.html#comments</comments>
-        <description><![CDATA[ <h1>rejectUnauthorized的默认值变了</h1>
-
-<p>这个变化发生在0.9.2版本中。下面的代码片段摘录自<a href="https://github.com/joyent/node/blob/v0.9.2-release/lib/tls.js">tls.js</a></p>
+        <description><![CDATA[ <p>这个变化发生在0.9.2版本中。下面的代码片段摘录自<a href="https://github.com/joyent/node/blob/v0.9.2-release/lib/tls.js">tls.js</a></p>
 
 <div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">rejectUnauthorized</span><span class="o">:</span> <span class="s1">&#39;0&#39;</span> <span class="o">!==</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_TLS_REJECT_UNAUTHORIZED</span>
@@ -171,115 +181,113 @@
         <link>http://tkdchen.me/blog/2013/06/09/release-resource-from-backbone-object.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/06/09/release-resource-from-backbone-object.html</guid>
         <comments>http://tkdchen.me/blog/2013/06/09/release-resource-from-backbone-object.html#comments</comments>
-        <description><![CDATA[ <h1>及时释放Backbone对象占用的资源</h1>
+        <description><![CDATA[ <p><a href="http://backbonejs.org/">Backbone</a>对象？是的，此文中提到的Backbone对象指的就是View，Model和Collection。他们占用什么资源呢？在一个使用了Backbone、<a href="http://socket.io/">socket.io</a>和<a href="http://alogicalparadox.com/backbone.iobind/">ioBind</a>的项目中，会在DOM层、Model和Collection，以及socket三个层面注册大量的事件处理函数实现用户功能。这些事件监听就是最大的一个资源占用。不仅仅消耗内存，还会导致在反复创建同一个Model或者Collection的对象的情况下事件响应的泛滥。因此，在什么时候释放这些资源，以及如何释放非常值得关注。为了回答这两个问题，先通过代码来看看典型的应用方式。</p>
 
-<p><a href="http://backbonejs.org/">Backbone</a>对象？是的，此文中提到的Backbone对象指的就是View，Model和Collection。他们占用什么资源呢？在一个使用了Backbone、<a href="http://socket.io/">socket.io</a>和<a href="http://alogicalparadox.com/backbone.iobind/">ioBind</a>的项目中，会在DOM层、Model和Collection，以及socket三个层面注册大量的事件处理函数实现用户功能。这些事件监听就是最大的一个资源占用。不仅仅消耗内存，还会导致在反复创建同一个Model或者Collection的对象的情况下事件响应的泛滥。因此，在什么时候释放这些资源，以及如何释放非常值得关注。为了回答这两个问题，先通过代码来看看典型的应用方式。</p>
-
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">BaseModel</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">idAttribute</span><span class="o">:</span> <span class="s2">&quot;_id&quot;</span><span class="p">,</span>
-  <span class="nx">socket</span><span class="o">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">socket</span><span class="p">,</span>
-  <span class="nx">urlRoot</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
-
-  <span class="nx">url</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">urlRoot</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
-  <span class="p">},</span>
-
-  <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">attributes</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;modelCleanup&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">modelCleanup</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">ioBind</span><span class="p">(</span><span class="s1">&#39;update&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">serverChange</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">ioBind</span><span class="p">(</span><span class="s1">&#39;delete&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">serverDelete</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-  <span class="p">},</span>
-
-  <span class="nx">serverChange</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
-  <span class="nx">serverDelete</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
-  <span class="nx">modelCleanup</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
-<span class="p">});</span>
-
-<span class="kd">var</span> <span class="nx">Checklist</span> <span class="o">=</span> <span class="nx">BaseModel</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">urlRoot</span><span class="o">:</span> <span class="s2">&quot;checklist&quot;</span><span class="p">,</span>
-
-  <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">attributes</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">itemCollection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChecklistItemCollection</span><span class="p">;</span>
-    <span class="nx">BaseModel</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">initialize</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-
-<span class="kd">var</span> <span class="nx">ChecklistItem</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">urlRoot</span><span class="o">:</span> <span class="s2">&quot;checklistitem&quot;</span>
-<span class="p">});</span>
-
-<span class="kd">var</span> <span class="nx">BaseCollection</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">url</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
-  <span class="nx">model</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
-  <span class="nx">socket</span><span class="o">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">socket</span><span class="p">,</span>
-
-  <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">models</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">_</span><span class="p">.</span><span class="nx">bindAll</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s2">&quot;serverCreate&quot;</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">ioBind</span><span class="p">(</span><span class="s2">&quot;create&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">socket</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">serverCreate</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-  <span class="p">},</span>
-
-  <span class="nx">serverCreate</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
-<span class="p">});</span>
-
-<span class="kd">var</span> <span class="nx">ChecklistCollection</span> <span class="o">=</span> <span class="nx">BaseCollection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/checklist&quot;</span><span class="p">,</span>
-  <span class="nx">model</span><span class="o">:</span> <span class="nx">Checklist</span>
-<span class="p">});</span>
-
-<span class="kd">var</span> <span class="nx">ChecklistItemCollection</span> <span class="o">=</span> <span class="nx">BaseCollection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/checklistitem&quot;</span><span class="p">,</span>
-  <span class="nx">model</span><span class="o">:</span> <span class="nx">ChecklistItem</span>
-<span class="p">});</span>
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span> <span class="kd">var</span> <span class="nx">BaseModel</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno"> 2</span>   <span class="nx">idAttribute</span><span class="o">:</span> <span class="s2">&quot;_id&quot;</span><span class="p">,</span>
+<span class="lineno"> 3</span>   <span class="nx">socket</span><span class="o">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">socket</span><span class="p">,</span>
+<span class="lineno"> 4</span>   <span class="nx">urlRoot</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
+<span class="lineno"> 5</span> 
+<span class="lineno"> 6</span>   <span class="nx">url</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno"> 7</span>     <span class="k">return</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">urlRoot</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="lineno"> 8</span>   <span class="p">},</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span>   <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">attributes</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">11</span>     <span class="k">this</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;modelCleanup&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">modelCleanup</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="lineno">12</span>     <span class="k">this</span><span class="p">.</span><span class="nx">ioBind</span><span class="p">(</span><span class="s1">&#39;update&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">serverChange</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="lineno">13</span>     <span class="k">this</span><span class="p">.</span><span class="nx">ioBind</span><span class="p">(</span><span class="s1">&#39;delete&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">serverDelete</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="lineno">14</span>   <span class="p">},</span>
+<span class="lineno">15</span> 
+<span class="lineno">16</span>   <span class="nx">serverChange</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
+<span class="lineno">17</span>   <span class="nx">serverDelete</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
+<span class="lineno">18</span>   <span class="nx">modelCleanup</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
+<span class="lineno">19</span> <span class="p">});</span>
+<span class="lineno">20</span> 
+<span class="lineno">21</span> <span class="kd">var</span> <span class="nx">Checklist</span> <span class="o">=</span> <span class="nx">BaseModel</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno">22</span>   <span class="nx">urlRoot</span><span class="o">:</span> <span class="s2">&quot;checklist&quot;</span><span class="p">,</span>
+<span class="lineno">23</span> 
+<span class="lineno">24</span>   <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">attributes</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">25</span>     <span class="k">this</span><span class="p">.</span><span class="nx">itemCollection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChecklistItemCollection</span><span class="p">;</span>
+<span class="lineno">26</span>     <span class="nx">BaseModel</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">initialize</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
+<span class="lineno">27</span>   <span class="p">}</span>
+<span class="lineno">28</span> <span class="p">});</span>
+<span class="lineno">29</span> 
+<span class="lineno">30</span> <span class="kd">var</span> <span class="nx">ChecklistItem</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno">31</span>   <span class="nx">urlRoot</span><span class="o">:</span> <span class="s2">&quot;checklistitem&quot;</span>
+<span class="lineno">32</span> <span class="p">});</span>
+<span class="lineno">33</span> 
+<span class="lineno">34</span> <span class="kd">var</span> <span class="nx">BaseCollection</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno">35</span>   <span class="nx">url</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
+<span class="lineno">36</span>   <span class="nx">model</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
+<span class="lineno">37</span>   <span class="nx">socket</span><span class="o">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">socket</span><span class="p">,</span>
+<span class="lineno">38</span> 
+<span class="lineno">39</span>   <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">models</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">40</span>     <span class="nx">_</span><span class="p">.</span><span class="nx">bindAll</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s2">&quot;serverCreate&quot;</span><span class="p">);</span>
+<span class="lineno">41</span>     <span class="k">this</span><span class="p">.</span><span class="nx">ioBind</span><span class="p">(</span><span class="s2">&quot;create&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">socket</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">serverCreate</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="lineno">42</span>   <span class="p">},</span>
+<span class="lineno">43</span> 
+<span class="lineno">44</span>   <span class="nx">serverCreate</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
+<span class="lineno">45</span> <span class="p">});</span>
+<span class="lineno">46</span> 
+<span class="lineno">47</span> <span class="kd">var</span> <span class="nx">ChecklistCollection</span> <span class="o">=</span> <span class="nx">BaseCollection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno">48</span>   <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/checklist&quot;</span><span class="p">,</span>
+<span class="lineno">49</span>   <span class="nx">model</span><span class="o">:</span> <span class="nx">Checklist</span>
+<span class="lineno">50</span> <span class="p">});</span>
+<span class="lineno">51</span> 
+<span class="lineno">52</span> <span class="kd">var</span> <span class="nx">ChecklistItemCollection</span> <span class="o">=</span> <span class="nx">BaseCollection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno">53</span>   <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/checklistitem&quot;</span><span class="p">,</span>
+<span class="lineno">54</span>   <span class="nx">model</span><span class="o">:</span> <span class="nx">ChecklistItem</span>
+<span class="lineno">55</span> <span class="p">});</span>
 </code></pre></div>
 
 
 <p>上面的代码定义了一个用于Checklist管理的模型。<code>Checklist</code>包含一个<code>ChecklistIteCollection</code>的实例来描述一对多的关系。使用ioBind来管理前端和后端之间的socket通信，以实现特定对象的CRUD操作。从代码中我们可以看到，只要创建了其中的任何一个对象，<code>this.ioBind</code>方法调用都将会导致响应socket事件的处理函数被注册。接下来是View的定义。</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">ChecklistView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">itemViews</span> <span class="o">=</span> <span class="p">[];</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onChecklistItemAdded</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-  <span class="p">},</span>
-
-  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{},</span>
-
-  <span class="nx">onChecklistItemAdded</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">checklistItem</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">view</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChecklistItemView</span><span class="p">({</span><span class="nx">model</span><span class="o">:</span> <span class="nx">checklistItem</span><span class="p">});</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">view</span><span class="p">.</span><span class="nx">render</span><span class="p">().</span><span class="nx">el</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">itemViews</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">view</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-
-<span class="kd">var</span> <span class="nx">ChecklistsView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">checklistViews</span> <span class="o">=</span> <span class="p">[];</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onChecklistAdded</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-  <span class="p">},</span>
-
-  <span class="nx">onChecklistAdded</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">checklist</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">view</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChecklistView</span><span class="p">({</span><span class="nx">model</span><span class="o">:</span> <span class="nx">checklist</span><span class="p">});</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">view</span><span class="p">.</span><span class="nx">render</span><span class="p">().</span><span class="nx">el</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">checklistViews</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">view</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-
-<span class="kd">var</span> <span class="nx">ChecklistItemView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;click .js-remove-item&quot;</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{}</span>
-  <span class="p">},</span>
-
-  <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-  <span class="p">},</span>
-
-  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{}</span>
-<span class="p">});</span>
-
-<span class="kd">var</span> <span class="nx">checklistManageView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChecklistsView</span><span class="p">({</span>
-  <span class="nx">el</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.some-selector&quot;</span><span class="p">),</span>
-  <span class="nx">collection</span><span class="o">:</span> <span class="k">new</span> <span class="nx">Checklists</span>
-<span class="p">});</span>
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span> <span class="kd">var</span> <span class="nx">ChecklistView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno"> 2</span>   <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno"> 3</span>     <span class="k">this</span><span class="p">.</span><span class="nx">itemViews</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="lineno"> 4</span>     <span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="lineno"> 5</span>     <span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onChecklistItemAdded</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="lineno"> 6</span>   <span class="p">},</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span>   <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{},</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span>   <span class="nx">onChecklistItemAdded</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">checklistItem</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">11</span>     <span class="kd">var</span> <span class="nx">view</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChecklistItemView</span><span class="p">({</span><span class="nx">model</span><span class="o">:</span> <span class="nx">checklistItem</span><span class="p">});</span>
+<span class="lineno">12</span>     <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">view</span><span class="p">.</span><span class="nx">render</span><span class="p">().</span><span class="nx">el</span><span class="p">);</span>
+<span class="lineno">13</span>     <span class="k">this</span><span class="p">.</span><span class="nx">itemViews</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">view</span><span class="p">);</span>
+<span class="lineno">14</span>   <span class="p">}</span>
+<span class="lineno">15</span> <span class="p">});</span>
+<span class="lineno">16</span> 
+<span class="lineno">17</span> <span class="kd">var</span> <span class="nx">ChecklistsView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno">18</span>   <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">19</span>     <span class="k">this</span><span class="p">.</span><span class="nx">checklistViews</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="lineno">20</span>     <span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onChecklistAdded</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="lineno">21</span>   <span class="p">},</span>
+<span class="lineno">22</span> 
+<span class="lineno">23</span>   <span class="nx">onChecklistAdded</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">checklist</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">24</span>     <span class="kd">var</span> <span class="nx">view</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChecklistView</span><span class="p">({</span><span class="nx">model</span><span class="o">:</span> <span class="nx">checklist</span><span class="p">});</span>
+<span class="lineno">25</span>     <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">view</span><span class="p">.</span><span class="nx">render</span><span class="p">().</span><span class="nx">el</span><span class="p">);</span>
+<span class="lineno">26</span>     <span class="k">this</span><span class="p">.</span><span class="nx">checklistViews</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">view</span><span class="p">);</span>
+<span class="lineno">27</span>   <span class="p">}</span>
+<span class="lineno">28</span> <span class="p">});</span>
+<span class="lineno">29</span> 
+<span class="lineno">30</span> <span class="kd">var</span> <span class="nx">ChecklistItemView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno">31</span>   <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+<span class="lineno">32</span>     <span class="s2">&quot;click .js-remove-item&quot;</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{}</span>
+<span class="lineno">33</span>   <span class="p">},</span>
+<span class="lineno">34</span> 
+<span class="lineno">35</span>   <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">36</span>     <span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="lineno">37</span>   <span class="p">},</span>
+<span class="lineno">38</span> 
+<span class="lineno">39</span>   <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{}</span>
+<span class="lineno">40</span> <span class="p">});</span>
+<span class="lineno">41</span> 
+<span class="lineno">42</span> <span class="kd">var</span> <span class="nx">checklistManageView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChecklistsView</span><span class="p">({</span>
+<span class="lineno">43</span>   <span class="nx">el</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.some-selector&quot;</span><span class="p">),</span>
+<span class="lineno">44</span>   <span class="nx">collection</span><span class="o">:</span> <span class="k">new</span> <span class="nx">Checklists</span>
+<span class="lineno">45</span> <span class="p">});</span>
 </code></pre></div>
 
 
@@ -293,32 +301,32 @@
 
 <p>Model和Collection的dispose方法则只关注自身的资源释放。即关闭所有在自身上建立的事件监听，以及通过ioBind或者其他方式建立的socket事件监听。示例代码如下。</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">BaseView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">close</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-
-<span class="kd">var</span> <span class="nx">BaseMode</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">dispose</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">off</span><span class="p">();</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">noIoBind</span><span class="p">)</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">ioUnbindAll</span><span class="p">();</span>
-    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-
-<span class="kd">var</span> <span class="nx">BaseCollection</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-  <span class="nx">dispose</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">item</span><span class="p">.</span><span class="nx">dispose</span><span class="p">();</span>
-    <span class="p">});</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">off</span><span class="p">();</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">noIoBind</span><span class="p">)</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">ioUnbindAll</span><span class="p">();</span>
-    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">});</span>
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span> <span class="kd">var</span> <span class="nx">BaseView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno"> 2</span>   <span class="nx">close</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno"> 3</span>     <span class="k">this</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+<span class="lineno"> 4</span>   <span class="p">}</span>
+<span class="lineno"> 5</span> <span class="p">});</span>
+<span class="lineno"> 6</span> 
+<span class="lineno"> 7</span> <span class="kd">var</span> <span class="nx">BaseMode</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno"> 8</span>   <span class="nx">dispose</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno"> 9</span>     <span class="k">this</span><span class="p">.</span><span class="nx">off</span><span class="p">();</span>
+<span class="lineno">10</span>     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">noIoBind</span><span class="p">)</span>
+<span class="lineno">11</span>       <span class="k">this</span><span class="p">.</span><span class="nx">ioUnbindAll</span><span class="p">();</span>
+<span class="lineno">12</span>     <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+<span class="lineno">13</span>   <span class="p">}</span>
+<span class="lineno">14</span> <span class="p">});</span>
+<span class="lineno">15</span> 
+<span class="lineno">16</span> <span class="kd">var</span> <span class="nx">BaseCollection</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno">17</span>   <span class="nx">dispose</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">18</span>     <span class="k">this</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">19</span>       <span class="nx">item</span><span class="p">.</span><span class="nx">dispose</span><span class="p">();</span>
+<span class="lineno">20</span>     <span class="p">});</span>
+<span class="lineno">21</span>     <span class="k">this</span><span class="p">.</span><span class="nx">off</span><span class="p">();</span>
+<span class="lineno">22</span>     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">noIoBind</span><span class="p">)</span>
+<span class="lineno">23</span>       <span class="k">this</span><span class="p">.</span><span class="nx">ioUnbindAll</span><span class="p">();</span>
+<span class="lineno">24</span>     <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+<span class="lineno">25</span>   <span class="p">}</span>
+<span class="lineno">26</span> <span class="p">});</span>
 </code></pre></div>
 
 
@@ -337,9 +345,7 @@
         <link>http://tkdchen.me/blog/2013/05/28/first-nodejs-package.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/05/28/first-nodejs-package.html</guid>
         <comments>http://tkdchen.me/blog/2013/05/28/first-nodejs-package.html#comments</comments>
-        <description><![CDATA[ <h1>我的第一个Node软件包nsignal</h1>
-
-<p>写于2013年5月28日晚</p>
+        <description><![CDATA[ <p>写于2013年5月28日晚</p>
 
 <p>用Javascript写程序已经有段时间了。在Node的环境下，Javascript充分发挥了起长期以来被忽视的强大力量。随着写的Javascript代码越来越多，对这门语言有了更加深入的理解。与此同时，在不断地使用和阅读第三方Node软件包的过程中，越发的感觉到Javascript的潜力无限和未来发展的各种无限可能。你愿意使用Javascirpt写日常的脚本程序吗，写GUI程序吗，开发网络应用吗？</p>
 
@@ -387,9 +393,7 @@
         <link>http://tkdchen.me/blog/2013/05/19/rpm-spec-for-python-gist.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/05/19/rpm-spec-for-python-gist.html</guid>
         <comments>http://tkdchen.me/blog/2013/05/19/rpm-spec-for-python-gist.html#comments</comments>
-        <description><![CDATA[ <h1>给Python软件包打RPM包用的SPEC模板</h1>
-
-<p>这个模板可作为为Python软件包制作RPM包的一个起点。它提供了能够成功完成一个RPM包的所有必要的信息。
+        <description><![CDATA[ <p>这个模板可作为为Python软件包制作RPM包的一个起点。它提供了能够成功完成一个RPM包的所有必要的信息。
 同时，预留了一些需要根据使用者的实际情况替换的信息。我使用了$var的格式来表明哪些需要用真实值来替
 换。</p>
 
@@ -399,7 +403,7 @@
 <script src='https://gist.github.com/5607189.js?file='></script>
 
 
-<div><noscript><pre><code></code></pre></noscript></div>
+<div><noscript><pre><code>&lt;html&gt;&lt;body&gt;You are being &lt;a href=&quot;https://github.com/gist/5607189&quot;&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;</code></pre></noscript></div>
 
  ]]></description>
       </item>
@@ -411,9 +415,7 @@
         <link>http://tkdchen.me/essay/2013/04/30/02-wear-mask-even-if-at-home.html</link>
         <guid isPermaLink="true">http://tkdchen.me/essay/2013/04/30/02-wear-mask-even-if-at-home.html</guid>
         <comments>http://tkdchen.me/essay/2013/04/30/02-wear-mask-even-if-at-home.html#comments</comments>
-        <description><![CDATA[ <h1>跟家还得带着口罩</h1>
-
-<p>春暖花开，满世界生机勃勃。但也是我一年中，鼻子最痛苦的时候。这个时候出个门如果口罩，
+        <description><![CDATA[ <p>春暖花开，满世界生机勃勃。但也是我一年中，鼻子最痛苦的时候。这个时候出个门如果口罩，
 就得备一卷卫生纸。甚至跟家还得带着点口罩，因为要开窗通风。如果要去个植物园那样的地方，
 口罩可是我的神啊。</p>
 
@@ -428,9 +430,7 @@
         <link>http://tkdchen.me/essay/2013/04/30/01-insomnia.html</link>
         <guid isPermaLink="true">http://tkdchen.me/essay/2013/04/30/01-insomnia.html</guid>
         <comments>http://tkdchen.me/essay/2013/04/30/01-insomnia.html#comments</comments>
-        <description><![CDATA[ <h1>失眠</h1>
-
-<p>写于2013年4月最后一天，凌晨3点。</p>
+        <description><![CDATA[ <p>写于2013年4月最后一天，凌晨3点。</p>
 
 <p>失眠了。第一次这么严重的睡不着。我想，肯定是失眠了。身体躺在床上翻来覆去始终找不到一个舒服的入睡的姿势。脑子里跟过火车似的，满脑子都是事情。像泉水一样，往外冒。根本就不再自己的控制范围之内。现在在硬撑着敲这些字。脑袋发沉，倦意已浓，希望一会儿能尽快入睡。鼻炎不再影响今天的睡眠。第一次失眠了，让我学会了一个单词，<a href="http://cn.bing.com/dict/search?q=insomnia">insomnia</a>。</p>
 
@@ -445,9 +445,7 @@
         <link>http://tkdchen.me/essay/2013/04/30/00-pages-with-jekyll-is-ready.html</link>
         <guid isPermaLink="true">http://tkdchen.me/essay/2013/04/30/00-pages-with-jekyll-is-ready.html</guid>
         <comments>http://tkdchen.me/essay/2013/04/30/00-pages-with-jekyll-is-ready.html#comments</comments>
-        <description><![CDATA[ <h1>开始用jekyll在Github Pages上写东西</h1>
-
-<p>写于2013年4月最后一天凌晨</p>
+        <description><![CDATA[ <p>写于2013年4月最后一天凌晨</p>
 
 <p>经过一个下午的尝试，终于把jekyll搞定。熟悉jekyll的使用方法后，发布文章会变得非常轻松。没有什么更多的可说的了。Github的发展方向让人充满想象。任
 何可以用git管理的东西都可以在Github上托管。以至于可以遇见的到，任何我想要与他人分享的内容都可以借助于这个公共的平台。内容管理完全自足，自由，没有任

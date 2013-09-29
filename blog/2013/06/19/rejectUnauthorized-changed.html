@@ -61,8 +61,7 @@
 						<div class="post-section">
 	<div class="post-main-body">
 	<h1>rejectUnauthorized的默认值变了</h1>
-
-<p>这个变化发生在0.9.2版本中。下面的代码片段摘录自<a href="https://github.com/joyent/node/blob/v0.9.2-release/lib/tls.js">tls.js</a></p>
+	<p>这个变化发生在0.9.2版本中。下面的代码片段摘录自<a href="https://github.com/joyent/node/blob/v0.9.2-release/lib/tls.js">tls.js</a></p>
 
 <div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">rejectUnauthorized</span><span class="o">:</span> <span class="s1">&#39;0&#39;</span> <span class="o">!==</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_TLS_REJECT_UNAUTHORIZED</span>
