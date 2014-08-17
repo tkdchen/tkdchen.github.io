@@ -49,7 +49,13 @@
 					</ul>
 
 					<div class="subscription">
-						<a href="/feeds/all.xml"><img src="/images/rss.png" alt="RSS" /></a>
+						  <a href="/feeds/all.xml"><img src="/images/rss.png" alt="RSS" /></a>
+					</div>
+
+					<div>
+						<a href="http://setiathome.berkeley.edu" title="SETI@Home" target="_blank">
+							<img src="http://setiathome.berkeley.edu/user_images/seti_button.png" alt="SETI@Home" />
+						</a>
 					</div>
 
 				</div>
@@ -66,10 +72,46 @@
 <p>模板遵循Fedora社区的RPM包打包规范。例如，Python软件包对应的RPM包通常加上<code>python-</code>前缀。
 如果你是在为一个django框架的扩展包打包，那么前缀应该使用<code>django-</code>。</p>
 
-<script src='https://gist.github.com/5607189.js?file='></script>
+<div class="highlight"><pre><code class="language-rpm" data-lang="rpm">%{!?python_sitelib: %define python_sitelib %(%{__python} -c &quot;from distutils.sysconfig import get_python_lib; print get_python_lib()&quot;)}
+%global pkg_name $name
 
+Name: python-%{pkg_name}
+Version: $version
+Release: 1%{?dist}
+Summary: $summary
 
-<div><noscript><pre><code>&lt;html&gt;&lt;body&gt;You are being &lt;a href=&quot;https://github.com/gist/5607189&quot;&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;</code></pre></noscript></div>
+Group: Development/Languages
+License: $license
+URL: $url
+Source0: %{pkg_name}-%{version}.tar.gz
+BuildArch: noarch
+
+# BuildRequires section here if necessary
+
+# Requires section here if necessary
+
+%description
+
+%prep
+%setup -q -n %{pkg_name}-%{version}
+
+%build
+%{__python} setup.py build
+
+%install
+rm -rf $RPM_BUILD_ROOT
+%{__python} setup.py install -O1 --skip-build --root $RPM_BUILD_ROOT
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root,-)
+%doc CHANGES.txt LICENSE.txt MANIFEST.in README.rst TODO.txt VERSION.txt
+%{python_sitelib}/%{pkg_name}/
+%{python_sitelib}/%{pkg_name}-%{version}-py*.egg-info/
+
+%changelog</code></pre></div>
 
 
 	</div>
@@ -77,11 +119,7 @@
 		<p>Written on: 19 May 2013</p>
 		<p>Tags:
 		
-		<a href="/tags.html#rpm">rpm</a>
-		
-		<a href="/tags.html#spec">spec</a>
-		
-		<a href="/tags.html#gist">gist</a>
+		<a href="/tags.html#RPM">RPM</a>
 		
 		</p>
 		<div class="share-section">
@@ -95,29 +133,6 @@
 						po.src = 'https://apis.google.com/js/plusone.js';
 						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 					})();
-					</script>
-				</li>
-				<li><!-- Share to Sina weibo.com -->
-				<script type="text/javascript" charset="utf-8">
-					(function(){
-						var _w = 90 , _h = 24;
-						var param = {
-							url:location.href,
-							type:'2',
-							count:'', /**是否显示分享数，1显示(可选)*/
-							appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
-							title:'给Python软件包打RPM包用的SPEC模板', /**分享的文字内容(可选，默认为所在页面的title)*/
-							pic:'', /**分享图片的路径(可选)*/
-							ralateUid:'', /**关联用户的UID，分享微博会@该用户(可选)*/
-							language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
-							dpc:1
-						}
-						var temp = [];
-						for( var p in param ){
-							temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
-						}
-						document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://service.weibo.com/staticjs/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
-					})()
 					</script>
 				</li>
 			</ul>

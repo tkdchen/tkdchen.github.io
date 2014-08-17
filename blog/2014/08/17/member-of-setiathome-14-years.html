@@ -49,7 +49,13 @@
 					</ul>
 
 					<div class="subscription">
-						<a href="/feeds/all.xml"><img src="/images/rss.png" alt="RSS" /></a>
+						  <a href="/feeds/all.xml"><img src="/images/rss.png" alt="RSS" /></a>
+					</div>
+
+					<div>
+						<a href="http://setiathome.berkeley.edu" title="SETI@Home" target="_blank">
+							<img src="http://setiathome.berkeley.edu/user_images/seti_button.png" alt="SETI@Home" />
+						</a>
 					</div>
 
 				</div>
@@ -135,29 +141,6 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
 						po.src = 'https://apis.google.com/js/plusone.js';
 						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 					})();
-					</script>
-				</li>
-				<li><!-- Share to Sina weibo.com -->
-				<script type="text/javascript" charset="utf-8">
-					(function(){
-						var _w = 90 , _h = 24;
-						var param = {
-							url:location.href,
-							type:'2',
-							count:'', /**是否显示分享数，1显示(可选)*/
-							appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
-							title:'参与SETI@Home项目已经14年了', /**分享的文字内容(可选，默认为所在页面的title)*/
-							pic:'', /**分享图片的路径(可选)*/
-							ralateUid:'', /**关联用户的UID，分享微博会@该用户(可选)*/
-							language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
-							dpc:1
-						}
-						var temp = [];
-						for( var p in param ){
-							temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
-						}
-						document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://service.weibo.com/staticjs/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
-					})()
 					</script>
 				</li>
 			</ul>
