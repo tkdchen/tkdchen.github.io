@@ -101,10 +101,15 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
 </ul>
 
 
-<p>http://www.haskell.org/haskellwiki/Parallelism_vs._Concurrency
-http://stackoverflow.com/a/15596277/968262
-http://blog.golang.org/concurrency-is-not-parallelism
-http://en.wikipedia.org/wiki/Concurrent_computing</p>
+<p>学习资料</p>
+
+<ul>
+<li><a href="http://www.haskell.org/haskellwiki/Parallelism_vs._Concurrency">http://www.haskell.org/haskellwiki/Parallelism_vs._Concurrency</a></li>
+<li><a href="http://stackoverflow.com/a/15596277/968262">http://stackoverflow.com/a/15596277/968262</a></li>
+<li><a href="http://blog.golang.org/concurrency-is-not-parallelism">http://blog.golang.org/concurrency-is-not-parallelism</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Concurrent_computing">http://en.wikipedia.org/wiki/Concurrent_computing</a></li>
+</ul>
+
  ]]></description>
       </item>
       
@@ -534,9 +539,9 @@ rm -rf $RPM_BUILD_ROOT
         <title>跟家还得带着口罩</title>
         <author>qcxhome@gmail.com</author>
         <pubDate>Tue, 30 Apr 2013 00:00:00 +0800</pubDate>
-        <link>http://tkdchen.me/essay/2013/04/30/02-wear-mask-even-if-at-home.html</link>
-        <guid isPermaLink="true">http://tkdchen.me/essay/2013/04/30/02-wear-mask-even-if-at-home.html</guid>
-        <comments>http://tkdchen.me/essay/2013/04/30/02-wear-mask-even-if-at-home.html#comments</comments>
+        <link>http://tkdchen.me/blog/2013/04/30/02-wear-mask-even-if-at-home.html</link>
+        <guid isPermaLink="true">http://tkdchen.me/blog/2013/04/30/02-wear-mask-even-if-at-home.html</guid>
+        <comments>http://tkdchen.me/blog/2013/04/30/02-wear-mask-even-if-at-home.html#comments</comments>
         <description><![CDATA[ <p>春暖花开，满世界生机勃勃。但也是我一年中，鼻子最痛苦的时候。这个时候出个门如果口罩，
 就得备一卷卫生纸。甚至跟家还得带着点口罩，因为要开窗通风。如果要去个植物园那样的地方，
 口罩可是我的神啊。</p>
@@ -549,9 +554,9 @@ rm -rf $RPM_BUILD_ROOT
         <title>失眠</title>
         <author>qcxhome@gmail.com</author>
         <pubDate>Tue, 30 Apr 2013 00:00:00 +0800</pubDate>
-        <link>http://tkdchen.me/essay/2013/04/30/01-insomnia.html</link>
-        <guid isPermaLink="true">http://tkdchen.me/essay/2013/04/30/01-insomnia.html</guid>
-        <comments>http://tkdchen.me/essay/2013/04/30/01-insomnia.html#comments</comments>
+        <link>http://tkdchen.me/blog/2013/04/30/01-insomnia.html</link>
+        <guid isPermaLink="true">http://tkdchen.me/blog/2013/04/30/01-insomnia.html</guid>
+        <comments>http://tkdchen.me/blog/2013/04/30/01-insomnia.html#comments</comments>
         <description><![CDATA[ <p>写于2013年4月最后一天，凌晨3点。</p>
 
 <p>失眠了。第一次这么严重的睡不着。我想，肯定是失眠了。身体躺在床上翻来覆去始终找不到一个舒服的入睡的姿势。脑子里跟过火车似的，满脑子都是事情。像泉水一样，往外冒。根本就不再自己的控制范围之内。现在在硬撑着敲这些字。脑袋发沉，倦意已浓，希望一会儿能尽快入睡。鼻炎不再影响今天的睡眠。第一次失眠了，让我学会了一个单词，<a href="http://cn.bing.com/dict/search?q=insomnia">insomnia</a>。</p>
@@ -564,9 +569,9 @@ rm -rf $RPM_BUILD_ROOT
         <title>开始用jekyll在Github Pages上写东西</title>
         <author>qcxhome@gmail.com</author>
         <pubDate>Tue, 30 Apr 2013 00:00:00 +0800</pubDate>
-        <link>http://tkdchen.me/essay/2013/04/30/00-pages-with-jekyll-is-ready.html</link>
-        <guid isPermaLink="true">http://tkdchen.me/essay/2013/04/30/00-pages-with-jekyll-is-ready.html</guid>
-        <comments>http://tkdchen.me/essay/2013/04/30/00-pages-with-jekyll-is-ready.html#comments</comments>
+        <link>http://tkdchen.me/blog/2013/04/30/00-pages-with-jekyll-is-ready.html</link>
+        <guid isPermaLink="true">http://tkdchen.me/blog/2013/04/30/00-pages-with-jekyll-is-ready.html</guid>
+        <comments>http://tkdchen.me/blog/2013/04/30/00-pages-with-jekyll-is-ready.html#comments</comments>
         <description><![CDATA[ <p>写于2013年4月最后一天凌晨</p>
 
 <p>经过一个下午的尝试，终于把jekyll搞定。熟悉jekyll的使用方法后，发布文章会变得非常轻松。没有什么更多的可说的了。Github的发展方向让人充满想象。任
