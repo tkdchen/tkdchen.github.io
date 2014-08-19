@@ -71,6 +71,49 @@
 			<section>
 				<div class="container">
 <div class="post-section">
+	<h1><a href="/blog/2014/08/19/how-to-run-boinc-in-fedora.html">如何在Fedora中运行BOINC</a></h1>
+	<p>在<a href="http://fedoraproject.org/">Fedora</a>中运行<a href="http://boinc.berkeley.edu/">BOINC</a>有两个方法，可以从官方网站下载二进制安装包，然后在本地安装。</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sh boinc_7.2.42_x86_64-pc-linux-gnu.sh</code></pre></div>
+
+
+<p>截至写这些文字的时候，<code>7.2.42</code>是最新的版本。有一点提示的是，安装过程会在执行此条命令的目录中创建
+BOINC子目录，所有必需的文件都将安装在这个目录中。</p>
+
+<p>然而，这第一种方法，我没有成功。在启动<code>boincmgr</code>总是出现程序库错误，无法运行。此时，就需要另外
+一种，BOINC的Wiki中也记载的方式。即使用特定的Linux发行版本的包管理器安装。</p>
+
+<p>对于Fedora，使用下面的命令。</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo yum install boinc-client boinc-manager</code></pre></div>
+
+
+<p>BOINC管理器允许管理多台计算机上的boinc计算进程。首次启动管理器后，需要手动地连接到某一台计算机上。步骤如下，</p>
+
+<ol>
+<li><p>通过菜单进入计算机选择对话框 <code>Advanced -&gt; Select Computer</code></p></li>
+<li><p>在<code>Host name</code>中，输入<code>127.0.0.1</code>。</p></li>
+<li><p>以root用户身份打开文件<code>/var/lib/boinc/gui_rpc_auth.cfg</code>，将其中地完整内容拷贝到<code>Password</code>。</p></li>
+</ol>
+
+
+<p>如果已经添加了至少一个分布式计算项目，你将会看到类似如下图所示的界面。</p>
+
+<p><img src="/images/blog/boinc-sample.png" alt="BOINC Manager Sample" /></p>
+
+	<p class="read-more"><a href="/blog/2014/08/19/how-to-run-boinc-in-fedora.html">Read More ...</a></p>
+	<p class="post-footer">
+		Written on: 19 Aug 2014
+		<a href="/blog/2014/08/19/how-to-run-boinc-in-fedora.html#comments">Comments</a> Tags:
+		
+		<a href="/tags.html#BOINC">BOINC</a>
+		
+		<a href="/tags.html#Fedora">Fedora</a>
+		
+	</p>
+</div>
+
+<div class="post-section">
 	<h1><a href="/blog/2014/08/17/member-of-setiathome-14-years.html">参与SETI@Home项目已经14年了</a></h1>
 	<p>一晃，参与<a href="http://setiathome.berkeley.edu/">SETI@Home</a>项目已经14年多了。SETI@Home项目首先提出并实践了利用全球空闲的CPU资源实现
 全球范围内的分布式计算思想。在这过去的14年中，逐渐演变成了<a href="http://boinc.berkeley.edu/">BOINC</a>通用的分布式计算平台。伴随着
