@@ -71,26 +71,35 @@
 			<section>
 				<div class="container"><div class="post-section">
 	<div class="post-main-body">
-	<h1>rejectUnauthorized的默认值变了</h1>
-	<p>这个变化发生在0.9.2版本中。下面的代码片段摘录自<a href="https://github.com/joyent/node/blob/v0.9.2-release/lib/tls.js">tls.js</a></p>
+	<h1>在VIM中常用的正则表达式</h1>
+	
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">rejectUnauthorized</span><span class="o">:</span> <span class="s1">&#39;0&#39;</span> <span class="o">!==</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_TLS_REJECT_UNAUTHORIZED</span>
-<span class="p">};</span></code></pre></div>
+<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="c">&quot; Tip 1: Add extra characters before the first character of each line</span>
+<span class="k">s</span><span class="sr">/^\(.\)/</span><span class="p">-</span> \<span class="m">1</span>/
+
+<span class="c">&quot; Tip 1.1: Comment lines of code</span>
+<span class="k">s</span><span class="sr">/^\(.\)/</span># \<span class="m">1</span>/
+
+<span class="c">&quot; Tip 1.2: Comment lines by adding # before the first letter</span>
+<span class="k">s</span><span class="sr">/^\( \+\)\(.\)/</span>\<span class="m">1</span># \<span class="m">2</span>/
+
+<span class="c">&quot; Tip 2: remove all trailing white space characters</span>
+<span class="k">s</span><span class="sr">/\s\+$/</span>/
+
+<span class="c">&quot; Tip 3: search class and method definition</span>
+^\<span class="p">(</span>class\<span class="p">|</span> *<span class="nb">def</span>\<span class="p">)</span> \<span class="p">+</span>\<span class="k">w</span>\<span class="p">+</span></code></pre></div>
 
 
-<p>从与<a href="https://github.com/joyent/node/blob/v0.9.1-release/lib/tls.js">0.9.1</a>版本的对比来看，在新版本中，允许使用环境变量来控制参数<code>rejectUnauthorized</code>。上面的代码则使得默认值从<code>false</code>变更为<code>true</code>。在tls模块的文档中记录了这个变化，遗憾的是Node的Changelog则没有记录。</p>
 
-<p>为了确保代码能够在Node的各个版本间保持兼容性，在<code>options</code>参数中明确地给<code>rejectUnauthorized</code>设置所期望的值，而不使用默认值。</p>
 
 	</div>
 	<div class="post-footer">
-		<p>Written on: 19 Jun 2013</p>
+		<p>Written on: 20 Aug 2014</p>
 		<p>Tags:
 		
-		<a href="/tags.html#Node">Node</a>
+		<a href="/tags.html#VIM">VIM</a>
 		
-		<a href="/tags.html#TLS">TLS</a>
+		<a href="/tags.html#Regex">Regex</a>
 		
 		</p>
 		<div class="share-section">

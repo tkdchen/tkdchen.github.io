@@ -7,12 +7,41 @@
       <language>zh-CN</language>
       <copyright>Copyright 2014, Chenxiong Qi</copyright>
       
-      <pubDate>Tue, 19 Aug 2014 17:00:10 +0800</pubDate>
-      <lastBuildDate>Tue, 19 Aug 2014 17:00:10 +0800</lastBuildDate>
+      <pubDate>Wed, 20 Aug 2014 23:25:20 +0800</pubDate>
+      <lastBuildDate>Wed, 20 Aug 2014 23:25:20 +0800</lastBuildDate>
       
       <generator>jekyll</generator>
       <managingEditor>qcxhome@gmail.com (Chenxiong Qi)</managingEditor>
       <webMaster>qcxhome@gmail.com (Chenxiong Qi)</webMaster>
+      
+      <item>
+        <title>在VIM中常用的正则表达式</title>
+        <author>qcxhome@gmail.com</author>
+        <pubDate>Wed, 20 Aug 2014 23:25:20 +0800</pubDate>
+        <link>http://tkdchen.me/blog/2014/08/20/frequently-used-vim-regex.html</link>
+        <guid isPermaLink="true">http://tkdchen.me/blog/2014/08/20/frequently-used-vim-regex.html</guid>
+        <comments>http://tkdchen.me/blog/2014/08/20/frequently-used-vim-regex.html#comments</comments>
+        <description><![CDATA[ 
+
+<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="c">&quot; Tip 1: Add extra characters before the first character of each line</span>
+<span class="k">s</span><span class="sr">/^\(.\)/</span><span class="p">-</span> \<span class="m">1</span>/
+
+<span class="c">&quot; Tip 1.1: Comment lines of code</span>
+<span class="k">s</span><span class="sr">/^\(.\)/</span># \<span class="m">1</span>/
+
+<span class="c">&quot; Tip 1.2: Comment lines by adding # before the first letter</span>
+<span class="k">s</span><span class="sr">/^\( \+\)\(.\)/</span>\<span class="m">1</span># \<span class="m">2</span>/
+
+<span class="c">&quot; Tip 2: remove all trailing white space characters</span>
+<span class="k">s</span><span class="sr">/\s\+$/</span>/
+
+<span class="c">&quot; Tip 3: search class and method definition</span>
+^\<span class="p">(</span>class\<span class="p">|</span> *<span class="nb">def</span>\<span class="p">)</span> \<span class="p">+</span>\<span class="k">w</span>\<span class="p">+</span></code></pre></div>
+
+
+
+ ]]></description>
+      </item>
       
       <item>
         <title>如何在Fedora中运行BOINC</title>
@@ -160,10 +189,10 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
         <comments>http://tkdchen.me/blog/2013/09/04/does-this-make-you-crazy.html#comments</comments>
         <description><![CDATA[ <p>这个函数定义是从<a href="https://github.com/openSUSE/libsolv">libsolv</a>中看到的。当你看到它的时候，会有中抓狂的感觉吗？</p>
 
-<div class="highlight"><pre><code class="language-c--" data-lang="c++">char*
-pool_tmpjoin(Pool *pool, const char *str1, const char *str2, const char *str3)
-{
-}</code></pre></div>
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">char</span><span class="o">*</span>
+<span class="nf">pool_tmpjoin</span><span class="p">(</span><span class="n">Pool</span> <span class="o">*</span><span class="n">pool</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str3</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>str[1..3]这三个参数是干什么用的，传什么参数，函数连个注释都没有。我去，不得不从代码里面找答案。</p>
@@ -270,14 +299,14 @@ pool_tmpjoin(Pool *pool, const char *str1, const char *str2, const char *str3)
         <comments>http://tkdchen.me/blog/2013/06/22/how-to-load-and-store-user-preference-in-plugin.html#comments</comments>
         <description><![CDATA[ <p>每一个插件都可以管理自己的用户偏好数据。这些数据存储在插件自己的配置目录中，彼此独立，互不影响。在GTG中，用户偏好数据被存储到一个字典对象中，使用pickel将其序列化到指定的文件中，此文件位于插件自己的专属目录中，其名称由开发者决定，并通过参数传递给用户偏好数据操作接口。插件API提供了两个方法用于读取和存储用户偏好数据，它们分别是<code>load_configuration_object</code> 和<code>save_configuration_object</code>，接口定义如下。</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python">def load_configuration_object(self, plugin_name, filename,
-                              basedir=xdg_config_home,
-                              default_values=None):
-    &#39;&#39;&#39;Load preference&#39;&#39;&#39;
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">load_configuration_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plugin_name</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span>
+                              <span class="n">basedir</span><span class="o">=</span><span class="n">xdg_config_home</span><span class="p">,</span>
+                              <span class="n">default_values</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Load preference&#39;&#39;&#39;</span>
 
-def save_configuration_object(self, plugin_name, filename, item,
-                              basedir=xdg_config_home):
-    &#39;&#39;&#39;Store preference&#39;&#39;&#39;</code></pre></div>
+<span class="k">def</span> <span class="nf">save_configuration_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plugin_name</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span>
+                              <span class="n">basedir</span><span class="o">=</span><span class="n">xdg_config_home</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Store preference&#39;&#39;&#39;</span></code></pre></div>
 
 
 <p>这两个接口均接受插件名称（plugin_name）和文件名（filename）两个参数。GTG不提供默认的文件名。推荐使用名称<code>preference</code>。存储用户偏好数据的字典对象传递给参数<code>item</code>。</p>
@@ -295,9 +324,9 @@ def save_configuration_object(self, plugin_name, filename, item,
         <comments>http://tkdchen.me/blog/2013/06/19/rejectUnauthorized-changed.html#comments</comments>
         <description><![CDATA[ <p>这个变化发生在0.9.2版本中。下面的代码片段摘录自<a href="https://github.com/joyent/node/blob/v0.9.2-release/lib/tls.js">tls.js</a></p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">var defaults = {
-  rejectUnauthorized: &#39;0&#39; !== process.env.NODE_TLS_REJECT_UNAUTHORIZED
-};</code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">rejectUnauthorized</span><span class="o">:</span> <span class="s1">&#39;0&#39;</span> <span class="o">!==</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_TLS_REJECT_UNAUTHORIZED</span>
+<span class="p">};</span></code></pre></div>
 
 
 <p>从与<a href="https://github.com/joyent/node/blob/v0.9.1-release/lib/tls.js">0.9.1</a>版本的对比来看，在新版本中，允许使用环境变量来控制参数<code>rejectUnauthorized</code>。上面的代码则使得默认值从<code>false</code>变更为<code>true</code>。在tls模块的文档中记录了这个变化，遗憾的是Node的Changelog则没有记录。</p>
@@ -315,110 +344,110 @@ def save_configuration_object(self, plugin_name, filename, item,
         <comments>http://tkdchen.me/blog/2013/06/09/release-resource-from-backbone-object.html#comments</comments>
         <description><![CDATA[ <p><a href="http://backbonejs.org/">Backbone</a>对象？是的，此文中提到的Backbone对象指的就是View，Model和Collection。他们占用什么资源呢？在一个使用了Backbone、<a href="http://socket.io/">socket.io</a>和<a href="http://alogicalparadox.com/backbone.iobind/">ioBind</a>的项目中，会在DOM层、Model和Collection，以及socket三个层面注册大量的事件处理函数实现用户功能。这些事件监听就是最大的一个资源占用。不仅仅消耗内存，还会导致在反复创建同一个Model或者Collection的对象的情况下事件响应的泛滥。因此，在什么时候释放这些资源，以及如何释放非常值得关注。为了回答这两个问题，先通过代码来看看典型的应用方式。</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">var BaseModel = Backbone.Model.extend({
-  idAttribute: &quot;_id&quot;,
-  socket: window.socket,
-  urlRoot: undefined,
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">BaseModel</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">idAttribute</span><span class="o">:</span> <span class="s2">&quot;_id&quot;</span><span class="p">,</span>
+  <span class="nx">socket</span><span class="o">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">socket</span><span class="p">,</span>
+  <span class="nx">urlRoot</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
 
-  url: function() {
-    return &quot;/&quot; + this.urlRoot + &quot;/&quot; + this.id;
-  },
+  <span class="nx">url</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">urlRoot</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+  <span class="p">},</span>
 
-  initialize: function (attributes, options) {
-    this.on(&#39;modelCleanup&#39;, this.modelCleanup, this);
-    this.ioBind(&#39;update&#39;, this.serverChange, this);
-    this.ioBind(&#39;delete&#39;, this.serverDelete, this);
-  },
+  <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">attributes</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;modelCleanup&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">modelCleanup</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">ioBind</span><span class="p">(</span><span class="s1">&#39;update&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">serverChange</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">ioBind</span><span class="p">(</span><span class="s1">&#39;delete&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">serverDelete</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+  <span class="p">},</span>
 
-  serverChange: function(data) {}
-  serverDelete: function(data) {}
-  modelCleanup: function(data) {}
-});
+  <span class="nx">serverChange</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
+  <span class="nx">serverDelete</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
+  <span class="nx">modelCleanup</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">});</span>
 
-var Checklist = BaseModel.extend({
-  urlRoot: &quot;checklist&quot;,
+<span class="kd">var</span> <span class="nx">Checklist</span> <span class="o">=</span> <span class="nx">BaseModel</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">urlRoot</span><span class="o">:</span> <span class="s2">&quot;checklist&quot;</span><span class="p">,</span>
 
-  initialize: function (attributes, options) {
-    this.itemCollection = new ChecklistItemCollection;
-    BaseModel.prototype.initialize.apply(this, arguments);
-  }
-});
+  <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">attributes</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">itemCollection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChecklistItemCollection</span><span class="p">;</span>
+    <span class="nx">BaseModel</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">initialize</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
 
-var ChecklistItem = Backbone.Model.extend({
-  urlRoot: &quot;checklistitem&quot;
-});
+<span class="kd">var</span> <span class="nx">ChecklistItem</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">urlRoot</span><span class="o">:</span> <span class="s2">&quot;checklistitem&quot;</span>
+<span class="p">});</span>
 
-var BaseCollection = Backbone.Collection.extend({
-  url: undefined,
-  model: undefined,
-  socket: window.socket,
+<span class="kd">var</span> <span class="nx">BaseCollection</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">url</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
+  <span class="nx">model</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
+  <span class="nx">socket</span><span class="o">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">socket</span><span class="p">,</span>
 
-  initialize: function(models, options) {
-    _.bindAll(this, &quot;serverCreate&quot;);
-    this.ioBind(&quot;create&quot;, this.socket, this.serverCreate, this);
-  },
+  <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">models</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">_</span><span class="p">.</span><span class="nx">bindAll</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s2">&quot;serverCreate&quot;</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">ioBind</span><span class="p">(</span><span class="s2">&quot;create&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">socket</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">serverCreate</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+  <span class="p">},</span>
 
-  serverCreate: function(data) {}
-});
+  <span class="nx">serverCreate</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">});</span>
 
-var ChecklistCollection = BaseCollection.extend({
-  url: &quot;/checklist&quot;,
-  model: Checklist
-});
+<span class="kd">var</span> <span class="nx">ChecklistCollection</span> <span class="o">=</span> <span class="nx">BaseCollection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/checklist&quot;</span><span class="p">,</span>
+  <span class="nx">model</span><span class="o">:</span> <span class="nx">Checklist</span>
+<span class="p">});</span>
 
-var ChecklistItemCollection = BaseCollection.extend({
-  url: &quot;/checklistitem&quot;,
-  model: ChecklistItem
-});</code></pre></div>
+<span class="kd">var</span> <span class="nx">ChecklistItemCollection</span> <span class="o">=</span> <span class="nx">BaseCollection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/checklistitem&quot;</span><span class="p">,</span>
+  <span class="nx">model</span><span class="o">:</span> <span class="nx">ChecklistItem</span>
+<span class="p">});</span></code></pre></div>
 
 
 <p>上面的代码定义了一个用于Checklist管理的模型。<code>Checklist</code>包含一个<code>ChecklistIteCollection</code>的实例来描述一对多的关系。使用ioBind来管理前端和后端之间的socket通信，以实现特定对象的CRUD操作。从代码中我们可以看到，只要创建了其中的任何一个对象，<code>this.ioBind</code>方法调用都将会导致响应socket事件的处理函数被注册。接下来是View的定义。</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">var ChecklistView = Backbone.View.extend({
-  initialize: function() {
-    this.itemViews = [];
-    this.model.on(&quot;change&quot;, this.render, this);
-    this.collection.on(&quot;add&quot;, this.onChecklistItemAdded, this);
-  },
-
-  render: function() {},
-
-  onChecklistItemAdded: function(checklistItem) {
-    var view = new ChecklistItemView({model: checklistItem});
-    this.$el.append(view.render().el);
-    this.itemViews.push(view);
-  }
-});
-
-var ChecklistsView = Backbone.View.extend({
-  initialize: function() {
-    this.checklistViews = [];
-    this.collection.on(&quot;add&quot;, this.onChecklistAdded, this);
-  },
-
-  onChecklistAdded: function(checklist) {
-    var view = new ChecklistView({model: checklist});
-    this.$el.append(view.render().el);
-    this.checklistViews.push(view);
-  }
-});
-
-var ChecklistItemView = Backbone.View.extend({
-  events: {
-    &quot;click .js-remove-item&quot;: function(event) {}
-  },
-
-  initialize: function() {
-    this.model.on(&quot;change&quot;, this.render, this);
-  },
-
-  render: function() {}
-});
-
-var checklistManageView = new ChecklistsView({
-  el: $(&quot;.some-selector&quot;),
-  collection: new Checklists
-});</code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="lineno"> 1</span> <span class="kd">var</span> <span class="nx">ChecklistView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno"> 2</span>   <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno"> 3</span>     <span class="k">this</span><span class="p">.</span><span class="nx">itemViews</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="lineno"> 4</span>     <span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="lineno"> 5</span>     <span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onChecklistItemAdded</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="lineno"> 6</span>   <span class="p">},</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span>   <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{},</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span>   <span class="nx">onChecklistItemAdded</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">checklistItem</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">11</span>     <span class="kd">var</span> <span class="nx">view</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChecklistItemView</span><span class="p">({</span><span class="nx">model</span><span class="o">:</span> <span class="nx">checklistItem</span><span class="p">});</span>
+<span class="lineno">12</span>     <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">view</span><span class="p">.</span><span class="nx">render</span><span class="p">().</span><span class="nx">el</span><span class="p">);</span>
+<span class="lineno">13</span>     <span class="k">this</span><span class="p">.</span><span class="nx">itemViews</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">view</span><span class="p">);</span>
+<span class="lineno">14</span>   <span class="p">}</span>
+<span class="lineno">15</span> <span class="p">});</span>
+<span class="lineno">16</span> 
+<span class="lineno">17</span> <span class="kd">var</span> <span class="nx">ChecklistsView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno">18</span>   <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">19</span>     <span class="k">this</span><span class="p">.</span><span class="nx">checklistViews</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="lineno">20</span>     <span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onChecklistAdded</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="lineno">21</span>   <span class="p">},</span>
+<span class="lineno">22</span> 
+<span class="lineno">23</span>   <span class="nx">onChecklistAdded</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">checklist</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">24</span>     <span class="kd">var</span> <span class="nx">view</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChecklistView</span><span class="p">({</span><span class="nx">model</span><span class="o">:</span> <span class="nx">checklist</span><span class="p">});</span>
+<span class="lineno">25</span>     <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">view</span><span class="p">.</span><span class="nx">render</span><span class="p">().</span><span class="nx">el</span><span class="p">);</span>
+<span class="lineno">26</span>     <span class="k">this</span><span class="p">.</span><span class="nx">checklistViews</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">view</span><span class="p">);</span>
+<span class="lineno">27</span>   <span class="p">}</span>
+<span class="lineno">28</span> <span class="p">});</span>
+<span class="lineno">29</span> 
+<span class="lineno">30</span> <span class="kd">var</span> <span class="nx">ChecklistItemView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno">31</span>   <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+<span class="lineno">32</span>     <span class="s2">&quot;click .js-remove-item&quot;</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{}</span>
+<span class="lineno">33</span>   <span class="p">},</span>
+<span class="lineno">34</span> 
+<span class="lineno">35</span>   <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">36</span>     <span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="lineno">37</span>   <span class="p">},</span>
+<span class="lineno">38</span> 
+<span class="lineno">39</span>   <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{}</span>
+<span class="lineno">40</span> <span class="p">});</span>
+<span class="lineno">41</span> 
+<span class="lineno">42</span> <span class="kd">var</span> <span class="nx">checklistManageView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChecklistsView</span><span class="p">({</span>
+<span class="lineno">43</span>   <span class="nx">el</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.some-selector&quot;</span><span class="p">),</span>
+<span class="lineno">44</span>   <span class="nx">collection</span><span class="o">:</span> <span class="k">new</span> <span class="nx">Checklists</span>
+<span class="lineno">45</span> <span class="p">});</span></code></pre></div>
 
 
 <p>到此，管理Checklist的所有前端代码已经齐全。由于此文着重于前端的处理，所以没有给出后端代码实现的参考。如果你对socket.io足够的了解，想必你会知道有很多种技术能够用来实现后端的功能。Node加socket.io Server是其中之一。此外，参照socket.io实现的其它<a href="https://github.com/learnboost/socket.io/wiki">解决方案</a>也非常丰富。好了，言归正传。让我们回过头来分析一下View层代码都干了什么。</p>
@@ -431,32 +460,32 @@ var checklistManageView = new ChecklistsView({
 
 <p>Model和Collection的dispose方法则只关注自身的资源释放。即关闭所有在自身上建立的事件监听，以及通过ioBind或者其他方式建立的socket事件监听。示例代码如下。</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">var BaseView = Backbone.View.extend({
-  close: function() {
-    this.remove();
-  }
-});
-
-var BaseMode = Backbone.Model.extend({
-  dispose: function() {
-    this.off();
-    if (!this.noIoBind)
-      this.ioUnbindAll();
-    return this;
-  }
-});
-
-var BaseCollection = Backbone.Collection.extend({
-  dispose: function() {
-    this.forEach(function(item, index) {
-      item.dispose();
-    });
-    this.off();
-    if (!this.noIoBind)
-      this.ioUnbindAll();
-    return this;
-  }
-});</code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="lineno"> 1</span> <span class="kd">var</span> <span class="nx">BaseView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno"> 2</span>   <span class="nx">close</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno"> 3</span>     <span class="k">this</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+<span class="lineno"> 4</span>   <span class="p">}</span>
+<span class="lineno"> 5</span> <span class="p">});</span>
+<span class="lineno"> 6</span> 
+<span class="lineno"> 7</span> <span class="kd">var</span> <span class="nx">BaseMode</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno"> 8</span>   <span class="nx">dispose</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno"> 9</span>     <span class="k">this</span><span class="p">.</span><span class="nx">off</span><span class="p">();</span>
+<span class="lineno">10</span>     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">noIoBind</span><span class="p">)</span>
+<span class="lineno">11</span>       <span class="k">this</span><span class="p">.</span><span class="nx">ioUnbindAll</span><span class="p">();</span>
+<span class="lineno">12</span>     <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+<span class="lineno">13</span>   <span class="p">}</span>
+<span class="lineno">14</span> <span class="p">});</span>
+<span class="lineno">15</span> 
+<span class="lineno">16</span> <span class="kd">var</span> <span class="nx">BaseCollection</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="lineno">17</span>   <span class="nx">dispose</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">18</span>     <span class="k">this</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">19</span>       <span class="nx">item</span><span class="p">.</span><span class="nx">dispose</span><span class="p">();</span>
+<span class="lineno">20</span>     <span class="p">});</span>
+<span class="lineno">21</span>     <span class="k">this</span><span class="p">.</span><span class="nx">off</span><span class="p">();</span>
+<span class="lineno">22</span>     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">noIoBind</span><span class="p">)</span>
+<span class="lineno">23</span>       <span class="k">this</span><span class="p">.</span><span class="nx">ioUnbindAll</span><span class="p">();</span>
+<span class="lineno">24</span>     <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+<span class="lineno">25</span>   <span class="p">}</span>
+<span class="lineno">26</span> <span class="p">});</span></code></pre></div>
 
 
 <p>具体的实现方式，可以依据项目的实际情况而定。我在目前的项目中，为View、Model、Collection分别定义基类，提供最基本的资源释放实现。在开发过程中约定，所有的自定义的View、Model和Collection都必须从相应的基类继承，同时在其生命的终点做好善后工作。</p>
@@ -529,46 +558,48 @@ var BaseCollection = Backbone.Collection.extend({
 <p>模板遵循Fedora社区的RPM包打包规范。例如，Python软件包对应的RPM包通常加上<code>python-</code>前缀。
 如果你是在为一个django框架的扩展包打包，那么前缀应该使用<code>django-</code>。</p>
 
-<div class="highlight"><pre><code class="language-rpm" data-lang="rpm">%{!?python_sitelib: %define python_sitelib %(%{__python} -c &quot;from distutils.sysconfig import get_python_lib; print get_python_lib()&quot;)}
+<div class="highlight"><pre><code class="language-spec" data-lang="spec"><span class="cp">%{!?python_sitelib: %define python_sitelib %(%{__python} -c &quot;from distutils.sysconfig import get_python_lib; print get_python_lib()&quot;)}</span>
 %global pkg_name $name
 
-Name: python-%{pkg_name}
-Version: $version
-Release: 1%{?dist}
-Summary: $summary
+<span class="gh">Name</span><span class="p">:</span> python-<span class="kc">%{pkg_name}</span>
+<span class="gh">Version</span><span class="p">:</span> $version
+<span class="gh">Release</span><span class="p">:</span> 1<span class="nv">%{?dist}</span>
+<span class="gh">Summary</span><span class="p">:</span> $summary
 
-Group: Development/Languages
-License: $license
-URL: $url
-Source0: %{pkg_name}-%{version}.tar.gz
-BuildArch: noarch
+<span class="gh">Group</span><span class="p">:</span> Development/Languages
+<span class="gh">License</span><span class="p">:</span> $license
+<span class="gh">URL</span><span class="p">:</span> $url
+<span class="gh">Source0</span><span class="p">:</span> <span class="kc">%{pkg_name}</span>-<span class="kc">%{version}</span>.tar.gz
+<span class="gh">BuildArch</span><span class="p">:</span> noarch
 
-# BuildRequires section here if necessary
+<span class="c"># BuildRequires section here if necessary</span>
 
-# Requires section here if necessary
+<span class="c"># Requires section here if necessary</span>
 
-%description
+<span class="nd">%description</span>
 
-%prep
-%setup -q -n %{pkg_name}-%{version}
+<span class="nd">%prep</span>
+<span class="k">%setup</span> -q -n <span class="kc">%{pkg_name}</span>-<span class="kc">%{version}</span>
 
-%build
-%{__python} setup.py build
+<span class="nd">%build</span>
+<span class="nf">%{__python}</span> setup.py build
 
-%install
-rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install -O1 --skip-build --root $RPM_BUILD_ROOT
+<span class="nd">%install</span>
+rm -rf <span class="vg">$RPM_BUILD_ROOT</span>
+<span class="nf">%{__python}</span> setup.py install -O1 --skip-build --root <span class="vg">$RPM_BUILD_ROOT</span>
 
-%clean
-rm -rf $RPM_BUILD_ROOT
+<span class="nd">%clean</span>
+rm -rf <span class="vg">$RPM_BUILD_ROOT</span>
 
-%files
-%defattr(-,root,root,-)
-%doc CHANGES.txt LICENSE.txt MANIFEST.in README.rst TODO.txt VERSION.txt
-%{python_sitelib}/%{pkg_name}/
-%{python_sitelib}/%{pkg_name}-%{version}-py*.egg-info/
+<span class="nd">%files</span>
+<span class="k">%defattr</span>(-,root,root,-)
+<span class="k">%doc</span> CHANGES.txt LICENSE.txt MANIFEST.in README.rst TODO.txt VERSION.txt
+<span class="kc">%{python_sitelib}</span>/<span class="kc">%{pkg_name}</span>/
+<span class="kc">%{python_sitelib}</span>/<span class="kc">%{pkg_name}</span>-<span class="kc">%{version}</span>-py*.egg-info/
 
-%changelog</code></pre></div>
+<span class="nd">%changelog</span></code></pre></div>
+
+
 
  ]]></description>
       </item>
