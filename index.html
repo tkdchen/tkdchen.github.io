@@ -71,6 +71,37 @@
 			<section>
 				<div class="container">
 <div class="post-section">
+	<h1><a href="/blog/2014/09/15/bugzilla-is-reimplemented-to-a-synchronization-service.html">GTG的Bugzilla插件被改写为同步服务</a></h1>
+	<p>最近，完成了对Bugzilla插件的重写，重新实现为GTG的同步服务（Synchronization Service）。不得而知是何原因需要做这个转换。
+您可以从<a href="https://bugs.launchpad.net/gtg/+bug/494967">Bug 494967</a>略之一二。</p>
+
+<p>原始的插件实现提供了基本的Bug信息同步功能。在用户输入一个Bug链接后，Bugzilla插件会得到GTG的通知，根据URL中提供的远程Bugzilla服务的信息，
+与之通信读取Bug信息并替换任务的主题和内容。同时，会把Bug的Component作为任务的标签。除了这些基本功能外，在我看来，有一点不足非常明显，即可配置程度不高。
+它体现在几个方面。</p>
+
+<ul>
+<li><p>所支持的Bugzilla服务是不可配置的。这些服务是写死在代码里的，用户对它们做任何的控制。例如，用户无法添加一个GTG尚未知晓的Bugzilla服务。</p></li>
+<li><p>标签同步的来源是不可配置的。标签的来源也是在代码里写死。用户没有任何选择的权力。Priority、Severity等Bug信息都是可以作为标签的很好的选项。
+如果有用户需要使用它们作为标签，则必须代码才能够实现。另外，如果用户想指定额外的名称作为标签，同样也只能指望GTG的开发者。显然这不够理想。</p></li>
+</ul>
+
+
+<p>在开始重新实现为同步服务之前，我希望能保持原始的功能不做任何改动，以便尽可能保持用户的原有的用户体验。此外，既然是重新实现，
+这也是个很好的重新考虑同步功能的好机会，借机改进Bugzilla同步服务，修改掉已知的一些问题。下面的几点是重写过程中所保持的和做出的改进。</p>
+
+	<p class="read-more"><a href="/blog/2014/09/15/bugzilla-is-reimplemented-to-a-synchronization-service.html">Read More ...</a></p>
+	<p class="post-footer">
+		Written on: 15 Sep 2014
+		<a href="/blog/2014/09/15/bugzilla-is-reimplemented-to-a-synchronization-service.html#comments">Comments</a> Tags:
+		
+		<a href="/tags.html#GNOME">GNOME</a>
+		
+		<a href="/tags.html#GTG">GTG</a>
+		
+	</p>
+</div>
+
+<div class="post-section">
 	<h1><a href="/blog/2014/08/20/frequently-used-vim-regex.html">在VIM中常用的正则表达式</a></h1>
 	
 
