@@ -7,12 +7,34 @@
       <language>zh-CN</language>
       <copyright>Copyright 2014, Chenxiong Qi</copyright>
       
-      <pubDate>Fri, 03 Oct 2014 19:35:36 +0800</pubDate>
-      <lastBuildDate>Fri, 03 Oct 2014 19:35:36 +0800</lastBuildDate>
+      <pubDate>Sat, 04 Oct 2014 20:11:07 +0800</pubDate>
+      <lastBuildDate>Sat, 04 Oct 2014 20:11:07 +0800</lastBuildDate>
       
       <generator>jekyll</generator>
       <managingEditor>qcxhome@gmail.com (Chenxiong Qi)</managingEditor>
       <webMaster>qcxhome@gmail.com (Chenxiong Qi)</webMaster>
+      
+      <item>
+        <title>Firefox的GNOME3皮肤很棒</title>
+        <author>qcxhome@gmail.com</author>
+        <pubDate>Sat, 04 Oct 2014 20:11:07 +0800</pubDate>
+        <link>http://tkdchen.me/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html</link>
+        <guid isPermaLink="true">http://tkdchen.me/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html</guid>
+        <comments>http://tkdchen.me/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html#comments</comments>
+        <description><![CDATA[ <p>自Firefox 29采用了新的界面设计后，很多人都吐槽这个酷似Chrome，但又不像的新设计。
+我也是其中一员。尽管用了一段时间以后，逐渐适应了新风格，但仍旧时常感觉不爽。很怀念
+之前的标签风格。偶然间，发现了一个新皮肤<a href="https://addons.mozilla.org/en-us/firefox/addon/adwaita/">GNOME 3</a>。
+安装之后的效果如下图所示。</p>
+
+<p><img src="/images/blog/firefox-gnome-3-theme.png" alt="Firefox with GNOME3 theme" /></p>
+
+<p>这个皮肤是由GNOME Integration团队制作的。可以说，运行的效果非常棒。与GNOME 3的
+整体风格浑然一体。</p>
+
+<p>结合使用<a href="https://addons.mozilla.org/en-US/firefox/addon/gnome-theme-tweak/">GNOME Theme Tweak</a>，
+能够让你调整皮肤中默认的界面元素的效果。</p>
+ ]]></description>
+      </item>
       
       <item>
         <title>不去YouTube看Linux Action Show</title>
