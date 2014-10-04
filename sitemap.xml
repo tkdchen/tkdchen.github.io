@@ -1,66 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+        <loc>http://tkdchen.me/</loc>
         
-        <loc>http://tkdchen.me/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html</loc>
+        
         <lastmod>2014-10-04</lastmod>
         
-        <loc>http://tkdchen.me/essay/2014/10/03/watch-linux-action-show-without-over-the-wall.html</loc>
-        <lastmod>2014-10-03</lastmod>
         
-        <loc>http://tkdchen.me/blog/2014/09/15/bugzilla-is-reimplemented-to-a-synchronization-service.html</loc>
-        <lastmod>2014-09-15</lastmod>
         
-        <loc>http://tkdchen.me/blog/2014/08/20/frequently-used-vim-regex.html</loc>
-        <lastmod>2014-08-20</lastmod>
         
-        <loc>http://tkdchen.me/blog/2014/08/19/how-to-run-boinc-in-fedora.html</loc>
-        <lastmod>2014-08-19</lastmod>
         
-        <loc>http://tkdchen.me/blog/2014/08/17/member-of-setiathome-14-years.html</loc>
-        <lastmod>2014-08-17</lastmod>
         
-        <loc>http://tkdchen.me/blog/2014/04/05/concurrency-parallelism.html</loc>
-        <lastmod>2014-04-05</lastmod>
         
-        <loc>http://tkdchen.me/blog/2013/09/04/does-this-make-you-crazy.html</loc>
-        <lastmod>2013-09-04</lastmod>
         
-        <loc>http://tkdchen.me/blog/2013/08/27/installing-qt-in-macos.html</loc>
-        <lastmod>2013-08-27</lastmod>
         
-        <loc>http://tkdchen.me/blog/2013/08/26/my-python-code-might-not-be-scored-10-10-by-pylint.html</loc>
-        <lastmod>2013-08-26</lastmod>
         
-        <loc>http://tkdchen.me/blog/2013/08/24/using-gnucash-to-manage-personal-finance.html</loc>
-        <lastmod>2013-08-24</lastmod>
         
-        <loc>http://tkdchen.me/blog/2013/08/09/how-to-request-personal-credit-report.html</loc>
-        <lastmod>2013-08-09</lastmod>
         
-        <loc>http://tkdchen.me/blog/2013/06/22/how-to-load-and-store-user-preference-in-plugin.html</loc>
-        <lastmod>2013-06-22</lastmod>
         
-        <loc>http://tkdchen.me/blog/2013/06/19/rejectUnauthorized-changed.html</loc>
-        <lastmod>2013-06-19</lastmod>
         
-        <loc>http://tkdchen.me/blog/2013/06/09/release-resource-from-backbone-object.html</loc>
-        <lastmod>2013-06-09</lastmod>
         
-        <loc>http://tkdchen.me/blog/2013/05/28/first-nodejs-package.html</loc>
-        <lastmod>2013-05-28</lastmod>
         
-        <loc>http://tkdchen.me/blog/2013/05/19/rpm-spec-for-python-gist.html</loc>
-        <lastmod>2013-05-19</lastmod>
         
-        <loc>http://tkdchen.me/blog/2013/04/30/02-wear-mask-even-if-at-home.html</loc>
-        <lastmod>2013-04-30</lastmod>
         
-        <loc>http://tkdchen.me/blog/2013/04/30/01-insomnia.html</loc>
-        <lastmod>2013-04-30</lastmod>
         
-        <loc>http://tkdchen.me/blog/2013/04/30/00-pages-with-jekyll-is-ready.html</loc>
-        <lastmod>2013-04-30</lastmod>
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <changefreq>daily</changefreq>
     </url>
 </urlset>
