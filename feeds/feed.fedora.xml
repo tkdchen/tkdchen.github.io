@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+   <channel>
+      <title>Chenxiong Qi's personal site</title>
+      <link>http://tkdchen.me</link>
+      <description>My personal site recording my life path</description>
+      <language>zh-CN</language>
+      <copyright>Copyright 2014, Chenxiong Qi</copyright>
+      
+      <pubDate>Sat, 04 Oct 2014 20:11:07 +0800</pubDate>
+      <lastBuildDate>Sat, 04 Oct 2014 20:11:07 CST</lastBuildDate>
+      
+      <generator>jekyll</generator>
+      <managingEditor>qcxhome@gmail.com (Chenxiong Qi)</managingEditor>
+      <webMaster>qcxhome@gmail.com (Chenxiong Qi)</webMaster>
+      
+      <item>
+        <title>如何在Fedora中运行BOINC</title>
+        <author>qcxhome@gmail.com</author>
+        <pubDate>Tue, 19 Aug 2014 17:00:10 CST</pubDate>
+        <link>http://tkdchen.me/blog/2014/08/19/how-to-run-boinc-in-fedora.html</link>
+        <guid isPermaLink="true">http://tkdchen.me/blog/2014/08/19/how-to-run-boinc-in-fedora.html</guid>
+        <comments>http://tkdchen.me/blog/2014/08/19/how-to-run-boinc-in-fedora.html#comments</comments>
+        <description><![CDATA[ <p>在<a href="http://fedoraproject.org/">Fedora</a>中运行<a href="http://boinc.berkeley.edu/">BOINC</a>有两个方法，可以从官方网站下载二进制安装包，然后在本地安装。</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sh boinc_7.2.42_x86_64-pc-linux-gnu.sh</code></pre></div>
+
+
+<p>截至写这些文字的时候，<code>7.2.42</code>是最新的版本。有一点提示的是，安装过程会在执行此条命令的目录中创建
+BOINC子目录，所有必需的文件都将安装在这个目录中。</p>
+
+<p>然而，这第一种方法，我没有成功。在启动<code>boincmgr</code>总是出现程序库错误，无法运行。此时，就需要另外
+一种，BOINC的Wiki中也记载的方式。即使用特定的Linux发行版本的包管理器安装。</p>
+
+<p>对于Fedora，使用下面的命令。</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo yum install boinc-client boinc-manager</code></pre></div>
+
+
+<p>BOINC管理器允许管理多台计算机上的boinc计算进程。首次启动管理器后，需要手动地连接到某一台计算机上。步骤如下，</p>
+
+<ol>
+<li>通过菜单进入计算机选择对话框 <code>Advanced -&gt; Select Computer</code></li>
+<li>在<code>Host name</code>中，输入<code>127.0.0.1</code>。</li>
+<li>以root用户身份打开文件<code>/var/lib/boinc/gui_rpc_auth.cfg</code>，将其中地完整内容拷贝到<code>Password</code>。</li>
+</ol>
+
+
+<p>如果已经添加了至少一个分布式计算项目，你将会看到类似如下图所示的界面。</p>
+
+<p><img src="/images/blog/boinc-sample.png" alt="BOINC Manager Sample" /></p>
+ ]]></description>
+      </item>
+      
+   </channel>
+</rss>

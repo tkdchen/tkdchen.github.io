@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <rss version="2.0">
    <channel>
-      <title></title>
+      <title>Chenxiong Qi's personal site</title>
       <link>http://tkdchen.me</link>
-      <description></description>
+      <description>My personal site recording my life path</description>
       <language>zh-CN</language>
       <copyright>Copyright 2014, Chenxiong Qi</copyright>
       
       <pubDate>Sat, 04 Oct 2014 20:11:07 +0800</pubDate>
-      <lastBuildDate>Sat, 04 Oct 2014 20:11:07 +0800</lastBuildDate>
+      <lastBuildDate>Sat, 04 Oct 2014 20:11:07 CST</lastBuildDate>
       
       <generator>jekyll</generator>
       <managingEditor>qcxhome@gmail.com (Chenxiong Qi)</managingEditor>
@@ -17,7 +17,7 @@
       <item>
         <title>Firefox的GNOME3皮肤很棒</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Sat, 04 Oct 2014 20:11:07 +0800</pubDate>
+        <pubDate>Sat, 04 Oct 2014 20:11:07 CST</pubDate>
         <link>http://tkdchen.me/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html</guid>
         <comments>http://tkdchen.me/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html#comments</comments>
@@ -39,7 +39,7 @@
       <item>
         <title>不去YouTube看Linux Action Show</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Fri, 03 Oct 2014 19:35:36 +0800</pubDate>
+        <pubDate>Fri, 03 Oct 2014 19:35:36 CST</pubDate>
         <link>http://tkdchen.me/essay/2014/10/03/watch-linux-action-show-without-over-the-wall.html</link>
         <guid isPermaLink="true">http://tkdchen.me/essay/2014/10/03/watch-linux-action-show-without-over-the-wall.html</guid>
         <comments>http://tkdchen.me/essay/2014/10/03/watch-linux-action-show-without-over-the-wall.html#comments</comments>
@@ -61,7 +61,7 @@
       <item>
         <title>GTG的Bugzilla插件被重新实现为同步服务了</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Mon, 15 Sep 2014 04:48:20 +0800</pubDate>
+        <pubDate>Mon, 15 Sep 2014 04:48:20 CST</pubDate>
         <link>http://tkdchen.me/blog/2014/09/15/bugzilla-is-reimplemented-to-a-synchronization-service.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2014/09/15/bugzilla-is-reimplemented-to-a-synchronization-service.html</guid>
         <comments>http://tkdchen.me/blog/2014/09/15/bugzilla-is-reimplemented-to-a-synchronization-service.html#comments</comments>
@@ -122,7 +122,7 @@ GTG采取了声明式的实现方式。它内置了有限的几种对应到不�
       <item>
         <title>在VIM中常用的正则表达式</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Wed, 20 Aug 2014 23:25:20 +0800</pubDate>
+        <pubDate>Wed, 20 Aug 2014 23:25:20 CST</pubDate>
         <link>http://tkdchen.me/blog/2014/08/20/frequently-used-vim-regex.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2014/08/20/frequently-used-vim-regex.html</guid>
         <comments>http://tkdchen.me/blog/2014/08/20/frequently-used-vim-regex.html#comments</comments>
@@ -151,7 +151,7 @@ GTG采取了声明式的实现方式。它内置了有限的几种对应到不�
       <item>
         <title>如何在Fedora中运行BOINC</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Tue, 19 Aug 2014 17:00:10 +0800</pubDate>
+        <pubDate>Tue, 19 Aug 2014 17:00:10 CST</pubDate>
         <link>http://tkdchen.me/blog/2014/08/19/how-to-run-boinc-in-fedora.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2014/08/19/how-to-run-boinc-in-fedora.html</guid>
         <comments>http://tkdchen.me/blog/2014/08/19/how-to-run-boinc-in-fedora.html#comments</comments>
@@ -189,7 +189,7 @@ BOINC子目录，所有必需的文件都将安装在这个目录中。</p>
       <item>
         <title>参与SETI@Home项目已经14年了</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Sun, 17 Aug 2014 18:20:10 +0800</pubDate>
+        <pubDate>Sun, 17 Aug 2014 18:20:10 CST</pubDate>
         <link>http://tkdchen.me/blog/2014/08/17/member-of-setiathome-14-years.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2014/08/17/member-of-setiathome-14-years.html</guid>
         <comments>http://tkdchen.me/blog/2014/08/17/member-of-setiathome-14-years.html#comments</comments>
@@ -253,7 +253,7 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
       <item>
         <title>Concurrency和Parallelism</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Sat, 05 Apr 2014 00:00:00 +0800</pubDate>
+        <pubDate>Sat, 05 Apr 2014 00:00:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2014/04/05/concurrency-parallelism.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2014/04/05/concurrency-parallelism.html</guid>
         <comments>http://tkdchen.me/blog/2014/04/05/concurrency-parallelism.html#comments</comments>
@@ -288,7 +288,7 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
       <item>
         <title>这个函数定义会让你抓狂吗？</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Wed, 04 Sep 2013 00:00:00 +0800</pubDate>
+        <pubDate>Wed, 04 Sep 2013 00:00:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2013/09/04/does-this-make-you-crazy.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/09/04/does-this-make-you-crazy.html</guid>
         <comments>http://tkdchen.me/blog/2013/09/04/does-this-make-you-crazy.html#comments</comments>
@@ -307,7 +307,7 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
       <item>
         <title>在Mac OS里安装QT</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Tue, 27 Aug 2013 00:00:00 +0800</pubDate>
+        <pubDate>Tue, 27 Aug 2013 00:00:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2013/08/27/installing-qt-in-macos.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/08/27/installing-qt-in-macos.html</guid>
         <comments>http://tkdchen.me/blog/2013/08/27/installing-qt-in-macos.html#comments</comments>
@@ -320,7 +320,7 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
       <item>
         <title>我的Python代码或许在多数时候都得不了100分</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Mon, 26 Aug 2013 00:00:00 +0800</pubDate>
+        <pubDate>Mon, 26 Aug 2013 00:00:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2013/08/26/my-python-code-might-not-be-scored-10-10-by-pylint.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/08/26/my-python-code-might-not-be-scored-10-10-by-pylint.html</guid>
         <comments>http://tkdchen.me/blog/2013/08/26/my-python-code-might-not-be-scored-10-10-by-pylint.html#comments</comments>
@@ -347,7 +347,7 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
       <item>
         <title>用GnuCash管理个人财务数据</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Sat, 24 Aug 2013 00:00:00 +0800</pubDate>
+        <pubDate>Sat, 24 Aug 2013 00:00:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2013/08/24/using-gnucash-to-manage-personal-finance.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/08/24/using-gnucash-to-manage-personal-finance.html</guid>
         <comments>http://tkdchen.me/blog/2013/08/24/using-gnucash-to-manage-personal-finance.html#comments</comments>
@@ -374,7 +374,7 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
       <item>
         <title>如何查询个人信用记录</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Fri, 09 Aug 2013 00:00:00 +0800</pubDate>
+        <pubDate>Fri, 09 Aug 2013 00:00:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2013/08/09/how-to-request-personal-credit-report.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/08/09/how-to-request-personal-credit-report.html</guid>
         <comments>http://tkdchen.me/blog/2013/08/09/how-to-request-personal-credit-report.html#comments</comments>
@@ -398,7 +398,7 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
       <item>
         <title>如何在GTG插件中读取和存储用户偏好数据</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Sat, 22 Jun 2013 00:00:00 +0800</pubDate>
+        <pubDate>Sat, 22 Jun 2013 00:00:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2013/06/22/how-to-load-and-store-user-preference-in-plugin.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/06/22/how-to-load-and-store-user-preference-in-plugin.html</guid>
         <comments>http://tkdchen.me/blog/2013/06/22/how-to-load-and-store-user-preference-in-plugin.html#comments</comments>
@@ -423,7 +423,7 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
       <item>
         <title>rejectUnauthorized的默认值变了</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Wed, 19 Jun 2013 00:00:00 +0800</pubDate>
+        <pubDate>Wed, 19 Jun 2013 00:00:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2013/06/19/rejectUnauthorized-changed.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/06/19/rejectUnauthorized-changed.html</guid>
         <comments>http://tkdchen.me/blog/2013/06/19/rejectUnauthorized-changed.html#comments</comments>
@@ -443,7 +443,7 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
       <item>
         <title>及时释放Backbone对象占用的资源</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Sun, 09 Jun 2013 18:30:00 +0800</pubDate>
+        <pubDate>Sun, 09 Jun 2013 18:30:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2013/06/09/release-resource-from-backbone-object.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/06/09/release-resource-from-backbone-object.html</guid>
         <comments>http://tkdchen.me/blog/2013/06/09/release-resource-from-backbone-object.html#comments</comments>
@@ -604,7 +604,7 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
       <item>
         <title>我的第一个Node软件包nsignal</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Tue, 28 May 2013 00:00:00 +0800</pubDate>
+        <pubDate>Tue, 28 May 2013 00:00:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2013/05/28/first-nodejs-package.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/05/28/first-nodejs-package.html</guid>
         <comments>http://tkdchen.me/blog/2013/05/28/first-nodejs-package.html#comments</comments>
@@ -652,7 +652,7 @@ SETI@Home项目的蓬勃发展，众多的分布式计算项目孕育而生，�
       <item>
         <title>给Python软件包打RPM包用的SPEC模板</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Sun, 19 May 2013 00:00:00 +0800</pubDate>
+        <pubDate>Sun, 19 May 2013 00:00:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2013/05/19/rpm-spec-for-python-gist.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/05/19/rpm-spec-for-python-gist.html</guid>
         <comments>http://tkdchen.me/blog/2013/05/19/rpm-spec-for-python-gist.html#comments</comments>
@@ -712,7 +712,7 @@ rm -rf <span class="vg">$RPM_BUILD_ROOT</span>
       <item>
         <title>跟家还得带着口罩</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Tue, 30 Apr 2013 00:00:00 +0800</pubDate>
+        <pubDate>Tue, 30 Apr 2013 00:00:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2013/04/30/02-wear-mask-even-if-at-home.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/04/30/02-wear-mask-even-if-at-home.html</guid>
         <comments>http://tkdchen.me/blog/2013/04/30/02-wear-mask-even-if-at-home.html#comments</comments>
@@ -727,7 +727,7 @@ rm -rf <span class="vg">$RPM_BUILD_ROOT</span>
       <item>
         <title>失眠</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Tue, 30 Apr 2013 00:00:00 +0800</pubDate>
+        <pubDate>Tue, 30 Apr 2013 00:00:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2013/04/30/01-insomnia.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/04/30/01-insomnia.html</guid>
         <comments>http://tkdchen.me/blog/2013/04/30/01-insomnia.html#comments</comments>
@@ -742,7 +742,7 @@ rm -rf <span class="vg">$RPM_BUILD_ROOT</span>
       <item>
         <title>开始用jekyll在Github Pages上写东西</title>
         <author>qcxhome@gmail.com</author>
-        <pubDate>Tue, 30 Apr 2013 00:00:00 +0800</pubDate>
+        <pubDate>Tue, 30 Apr 2013 00:00:00 CST</pubDate>
         <link>http://tkdchen.me/blog/2013/04/30/00-pages-with-jekyll-is-ready.html</link>
         <guid isPermaLink="true">http://tkdchen.me/blog/2013/04/30/00-pages-with-jekyll-is-ready.html</guid>
         <comments>http://tkdchen.me/blog/2013/04/30/00-pages-with-jekyll-is-ready.html#comments</comments>
