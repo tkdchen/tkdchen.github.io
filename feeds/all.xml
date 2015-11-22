@@ -7,36 +7,12 @@
       <language>zh-CN</language>
       <copyright>Copyright 2014, Chenxiong Qi</copyright>
       
-      <pubDate>Sun, 22 Nov 2015 00:00:00 +0800</pubDate>
-      <lastBuildDate>Sun, 22 Nov 2015 00:00:00 CST</lastBuildDate>
+      <pubDate>Sat, 04 Oct 2014 20:11:07 +0800</pubDate>
+      <lastBuildDate>Sat, 04 Oct 2014 20:11:07 CST</lastBuildDate>
       
       <generator>jekyll</generator>
       <managingEditor>qcxhome@gmail.com (Chenxiong Qi)</managingEditor>
       <webMaster>qcxhome@gmail.com (Chenxiong Qi)</webMaster>
-      
-      <item>
-        <title>Parsing RPM NVR, NVRA and filename</title>
-        <author>qcxhome@gmail.com</author>
-        <pubDate>Sun, 22 Nov 2015 00:00:00 CST</pubDate>
-        <link>http://tkdchen.me/blog/2015/11/22/parsing-rpm-nvr-nvra.html</link>
-        <guid isPermaLink="true">http://tkdchen.me/blog/2015/11/22/parsing-rpm-nvr-nvra.html</guid>
-        <comments>http://tkdchen.me/blog/2015/11/22/parsing-rpm-nvr-nvra.html#comments</comments>
-        <description><![CDATA[ <h2>Parsing NVR</h2>
-
-<h2>Parsing NVRA</h2>
-
-<h2>Parsing a RPM filename</h2>
-
-<table>
-    <tr>
-        <td></td>
-        <td>Description</td>
-        <td>Cons.</td>
-    </tr>
-</table>
-
- ]]></description>
-      </item>
       
       <item>
         <title>Firefox的GNOME3皮肤很棒</title>
