@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="msvalidate.01" content="BFF6A5C0505C557ED95FF6AD05C0CEF2" />
 		<meta name="baidu-site-verification" content="uscdVavdsc" />
-		<title>./echo X</title>
+		<title>./echo _</title>
 		<link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
 		<script type="text/javascript" src="/javascripts/jquery.js"></script>
@@ -39,34 +39,22 @@
 		<div class="wrapper">
 			<header>
 				<div class="container">
-					<h1 class="header"><a href="/">./echo X</a></h1>
-					<p class="header"></p>
+					<div class="nav">
+						<ul>
+							<li><a class="root-page" href="/">./echo _</a></li>
+							<li><a class="buttons js-projects" href="/">Blog</a></li>
+							<li><a class="buttons js-projects" href="/scripts.html">Scripts</a></li>
+							<li><a class="buttons js-projects" href="/tags.html">Tag</a></li>
+						</ul>
+					</div>
 
-					<ul>
-						<li><a class="buttons js-projects" href="/projects.html">Projects</a></li>
-						<li><a class="buttons" href="http://www.flickr.com/photos/55770412@N08/" target="_blank">Photos</a></li>
-						<li><a class="buttons" href="http://about.me/tkdchen" target="_blank">About me</a></li>
-						<li><a class="buttons github" href="https://github.com/tkdchen/mysite">View On GitHub</a></li>
-					</ul>
+					<!-- <p class="header"></p> -->
 
 					<div class="follow-me">
-						<a href="http://cn.linkedin.com/pub/chenxiong-qi/2b/a83/625/">
-							<img src="/images/linkedin-logo.png" alt="Link Me" width="24" height="24" />
-						</a>
-						<a href="https://plus.google.com/106047565908709135904">
-							<img src="/images/gplus-icon.png" alt="Goolg Plus" width="28" height="28" />
-						</a>
 						<a href="/feeds/all.xml">
 							<img src="/images/rss.png" alt="RSS" width="24" height="24" />
 						</a>
 					</div>
-
-					<div>
-						<a href="http://setiathome.berkeley.edu" title="SETI@Home" target="_blank">
-							<img src="http://setiathome.berkeley.edu/user_images/seti_button.png" alt="SETI@Home" />
-						</a>
-					</div>
-
 				</div>
 			</header>
 
@@ -76,11 +64,10 @@
 	<h1>这个函数定义会让你抓狂吗？</h1>
 	<p>这个函数定义是从<a href="https://github.com/openSUSE/libsolv">libsolv</a>中看到的。当你看到它的时候，会有中抓狂的感觉吗？</p>
 
-<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">char</span><span class="o">*</span>
-<span class="nf">pool_tmpjoin</span><span class="p">(</span><span class="n">Pool</span> <span class="o">*</span><span class="n">pool</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str3</span><span class="p">)</span>
+<p><figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">char</span><span class="o"><em></span>
+<span class="nf">pool_tmpjoin</span><span class="p">(</span><span class="n">Pool</span> <span class="o"></em></span><span class="n">pool</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o"><em></span><span class="n">str1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o"></em></span><span class="n">str2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str3</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="p">}</span></code></pre></div>
-
+<span class="p">}</span></code></pre></figure></p>
 
 <p>str[1..3]这三个参数是干什么用的，传什么参数，函数连个注释都没有。我去，不得不从代码里面找答案。</p>
 

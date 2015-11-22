@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="msvalidate.01" content="BFF6A5C0505C557ED95FF6AD05C0CEF2" />
 		<meta name="baidu-site-verification" content="uscdVavdsc" />
-		<title>./echo X</title>
+		<title>./echo _</title>
 		<link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
 		<script type="text/javascript" src="/javascripts/jquery.js"></script>
@@ -39,34 +39,22 @@
 		<div class="wrapper">
 			<header>
 				<div class="container">
-					<h1 class="header"><a href="/">./echo X</a></h1>
-					<p class="header"></p>
+					<div class="nav">
+						<ul>
+							<li><a class="root-page" href="/">./echo _</a></li>
+							<li><a class="buttons js-projects" href="/">Blog</a></li>
+							<li><a class="buttons js-projects" href="/scripts.html">Scripts</a></li>
+							<li><a class="buttons js-projects" href="/tags.html">Tag</a></li>
+						</ul>
+					</div>
 
-					<ul>
-						<li><a class="buttons js-projects" href="/projects.html">Projects</a></li>
-						<li><a class="buttons" href="http://www.flickr.com/photos/55770412@N08/" target="_blank">Photos</a></li>
-						<li><a class="buttons" href="http://about.me/tkdchen" target="_blank">About me</a></li>
-						<li><a class="buttons github" href="https://github.com/tkdchen/mysite">View On GitHub</a></li>
-					</ul>
+					<!-- <p class="header"></p> -->
 
 					<div class="follow-me">
-						<a href="http://cn.linkedin.com/pub/chenxiong-qi/2b/a83/625/">
-							<img src="/images/linkedin-logo.png" alt="Link Me" width="24" height="24" />
-						</a>
-						<a href="https://plus.google.com/106047565908709135904">
-							<img src="/images/gplus-icon.png" alt="Goolg Plus" width="28" height="28" />
-						</a>
 						<a href="/feeds/all.xml">
 							<img src="/images/rss.png" alt="RSS" width="24" height="24" />
 						</a>
 					</div>
-
-					<div>
-						<a href="http://setiathome.berkeley.edu" title="SETI@Home" target="_blank">
-							<img src="http://setiathome.berkeley.edu/user_images/seti_button.png" alt="SETI@Home" />
-						</a>
-					</div>
-
 				</div>
 			</header>
 
@@ -76,8 +64,7 @@
 	<h1>如何在Fedora中运行BOINC</h1>
 	<p>在<a href="http://fedoraproject.org/">Fedora</a>中运行<a href="http://boinc.berkeley.edu/">BOINC</a>有两个方法，可以从官方网站下载二进制安装包，然后在本地安装。</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">sh boinc_7.2.42_x86_64-pc-linux-gnu.sh</code></pre></div>
-
+<p><figure class="highlight"><pre><code class="language-bash" data-lang="bash">sh boinc_7.2.42_x86_64-pc-linux-gnu.sh</code></pre></figure></p>
 
 <p>截至写这些文字的时候，<code>7.2.42</code>是最新的版本。有一点提示的是，安装过程会在执行此条命令的目录中创建
 BOINC子目录，所有必需的文件都将安装在这个目录中。</p>
@@ -87,8 +74,7 @@ BOINC子目录，所有必需的文件都将安装在这个目录中。</p>
 
 <p>对于Fedora，使用下面的命令。</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo yum install boinc-client boinc-manager</code></pre></div>
-
+<p><figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo yum install boinc-client boinc-manager</code></pre></figure></p>
 
 <p>BOINC管理器允许管理多台计算机上的boinc计算进程。首次启动管理器后，需要手动地连接到某一台计算机上。步骤如下，</p>
 

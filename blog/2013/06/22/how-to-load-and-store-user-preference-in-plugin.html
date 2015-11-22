@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="msvalidate.01" content="BFF6A5C0505C557ED95FF6AD05C0CEF2" />
 		<meta name="baidu-site-verification" content="uscdVavdsc" />
-		<title>./echo X</title>
+		<title>./echo _</title>
 		<link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
 		<script type="text/javascript" src="/javascripts/jquery.js"></script>
@@ -39,34 +39,22 @@
 		<div class="wrapper">
 			<header>
 				<div class="container">
-					<h1 class="header"><a href="/">./echo X</a></h1>
-					<p class="header"></p>
+					<div class="nav">
+						<ul>
+							<li><a class="root-page" href="/">./echo _</a></li>
+							<li><a class="buttons js-projects" href="/">Blog</a></li>
+							<li><a class="buttons js-projects" href="/scripts.html">Scripts</a></li>
+							<li><a class="buttons js-projects" href="/tags.html">Tag</a></li>
+						</ul>
+					</div>
 
-					<ul>
-						<li><a class="buttons js-projects" href="/projects.html">Projects</a></li>
-						<li><a class="buttons" href="http://www.flickr.com/photos/55770412@N08/" target="_blank">Photos</a></li>
-						<li><a class="buttons" href="http://about.me/tkdchen" target="_blank">About me</a></li>
-						<li><a class="buttons github" href="https://github.com/tkdchen/mysite">View On GitHub</a></li>
-					</ul>
+					<!-- <p class="header"></p> -->
 
 					<div class="follow-me">
-						<a href="http://cn.linkedin.com/pub/chenxiong-qi/2b/a83/625/">
-							<img src="/images/linkedin-logo.png" alt="Link Me" width="24" height="24" />
-						</a>
-						<a href="https://plus.google.com/106047565908709135904">
-							<img src="/images/gplus-icon.png" alt="Goolg Plus" width="28" height="28" />
-						</a>
 						<a href="/feeds/all.xml">
 							<img src="/images/rss.png" alt="RSS" width="24" height="24" />
 						</a>
 					</div>
-
-					<div>
-						<a href="http://setiathome.berkeley.edu" title="SETI@Home" target="_blank">
-							<img src="http://setiathome.berkeley.edu/user_images/seti_button.png" alt="SETI@Home" />
-						</a>
-					</div>
-
 				</div>
 			</header>
 
@@ -76,15 +64,14 @@
 	<h1>如何在GTG插件中读取和存储用户偏好数据</h1>
 	<p>每一个插件都可以管理自己的用户偏好数据。这些数据存储在插件自己的配置目录中，彼此独立，互不影响。在GTG中，用户偏好数据被存储到一个字典对象中，使用pickel将其序列化到指定的文件中，此文件位于插件自己的专属目录中，其名称由开发者决定，并通过参数传递给用户偏好数据操作接口。插件API提供了两个方法用于读取和存储用户偏好数据，它们分别是<code>load_configuration_object</code> 和<code>save_configuration_object</code>，接口定义如下。</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">load_configuration_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plugin_name</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span>
+<p><figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">load_configuration_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plugin_name</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span>
                               <span class="n">basedir</span><span class="o">=</span><span class="n">xdg_config_home</span><span class="p">,</span>
                               <span class="n">default_values</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;Load preference&#39;&#39;&#39;</span>
+    <span class="sd">&#39;&#39;&#39;Load preference&#39;&#39;&#39;</span></p>
 
-<span class="k">def</span> <span class="nf">save_configuration_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plugin_name</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span>
+<p><span class="k">def</span> <span class="nf">save_configuration_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plugin_name</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span>
                               <span class="n">basedir</span><span class="o">=</span><span class="n">xdg_config_home</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;Store preference&#39;&#39;&#39;</span></code></pre></div>
-
+    <span class="sd">&#39;&#39;&#39;Store preference&#39;&#39;&#39;</span></code></pre></figure></p>
 
 <p>这两个接口均接受插件名称（plugin_name）和文件名（filename）两个参数。GTG不提供默认的文件名。推荐使用名称<code>preference</code>。存储用户偏好数据的字典对象传递给参数<code>item</code>。</p>
 
