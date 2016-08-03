@@ -61,6 +61,50 @@
 			<section>
 				<div class="container">
 <div class="post-section">
+	<h1><a href="/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html">Ensure ABI compliance with fedabipkgdiff</a></h1>
+	<p>In the past days, I have been hacking on
+<a href="https://sourceware.org/libabigail/">libabigail</a> to write a tool named
+fedabipkgdiff. That came from a cool idea of Dodji Seketeli who is the author
+of libabigail and is built on top of the powerful libabigail framework. Just
+imagine, if you are a Fedora developer or packager, when you want to ensure
+the new version software is ABI-compatible with previous version or versions,
+how would you do that? If there are already built builds in Koji, if you want
+to see what ABI differences they have, then how to do that? fedabipkgdiff is
+able to make your life easier.</p>
+
+<p>fedabipkgdiff is designed to be as smart as possible to find necessary RPMs
+from local or Koji, and run ABI check automatically on behalf of you. All you
+need to do is just to specify</p>
+
+<ul>
+<li>from where to find RPMs, which defaults to Koji obviously</li>
+<li>what RPMs are needed, to select RPMs from latest build of a distribution
+such as Fedora 24, 25, or from a specific build with <code>N-V-R</code> such as
+<code>httpd-2.4.23-4.fc24</code></li>
+<li>how RPMs will be compared, that means you have a chance to let fedabipkgdiff
+do not compare with development package, you can also tell it to compare
+without loading suppression file</li>
+</ul>
+
+
+<p>Okay, now I'll show you some examples to see what fedabipkgdiff can do.</p>
+
+<p>First, I want to compare package httpd selected from latest build built for
+Fedora 24 and 25. Run this command</p>
+
+	<p class="read-more"><a href="/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html">Read More ...</a></p>
+	<p class="post-footer">
+		Written on: 03 Aug 2016
+		<a href="/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html#comments">Comments</a> Tags:
+		
+		<a href="/tags.html#Fedora">Fedora</a>
+		
+		<a href="/tags.html#libabigail">libabigail</a>
+		
+	</p>
+</div>
+
+<div class="post-section">
 	<h1><a href="/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html">Firefox的GNOME3皮肤很棒</a></h1>
 	<p>自Firefox 29采用了新的界面设计后，很多人都吐槽这个酷似Chrome，但又不像的新设计。
 我也是其中一员。尽管用了一段时间以后，逐渐适应了新风格，但仍旧时常感觉不爽。很怀念

@@ -4,7 +4,9 @@
         <loc>http://tkdchen.me/</loc>
         
         
-        <lastmod>2014-10-04T20:11:07+08:00</lastmod>
+        <lastmod>2016-08-03T00:00:00+08:00</lastmod>
+        
+        
         
         
         
@@ -48,6 +50,13 @@
 
     
 
+    
+    <url>
+        <loc>http://tkdchen.me/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html</loc>
+        <lastmod>2016-08-03T00:00:00+08:00</lastmod>
+        
+        <changefreq>daily</changefreq>
+    </url>
     
     <url>
         <loc>http://tkdchen.me/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html</loc>
