@@ -1,259 +1,28 @@
 <?xml version="1.0"?>
 <rss version="2.0">
    <channel>
-      <title>Chenxiong Qi's personal site</title>
-      <link>http://tkdchen.me</link>
-      <description>My personal site recording my life path</description>
+      <title>{{ site.name }}</title>
+      <link>{{ site.url }}</link>
+      <description>{{ site.description }}</description>
       <language>zh-CN</language>
       <copyright>Copyright 2014, Chenxiong Qi</copyright>
-      
-      <pubDate>Wed, 03 Aug 2016 00:00:00 +0800</pubDate>
-      <lastBuildDate>Wed, 03 Aug 2016 00:00:00 CST</lastBuildDate>
-      
+      {% for post in site.posts limit:1 %}
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+      <lastBuildDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</lastBuildDate>
+      {% endfor %}
       <generator>jekyll</generator>
-      <managingEditor>qcxhome@gmail.com (Chenxiong Qi)</managingEditor>
-      <webMaster>qcxhome@gmail.com (Chenxiong Qi)</webMaster>
-      
+      <managingEditor>{{ site.email }} ({{ site.my_name }})</managingEditor>
+      <webMaster>{{ site.email }} ({{ site.my_name }})</webMaster>
+      {% for post in site.tags.Fedora %}
       <item>
-        <title>Ensure ABI compliance with fedabipkgdiff</title>
-        <author>qcxhome@gmail.com</author>
-        <pubDate>Wed, 03 Aug 2016 00:00:00 CST</pubDate>
-        <link>http://tkdchen.me/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html</link>
-        <guid isPermaLink="true">http://tkdchen.me/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html</guid>
-        <comments>http://tkdchen.me/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html#comments</comments>
-        <description><![CDATA[ <p>In the past days, I have been hacking on
-<a href="https://sourceware.org/libabigail/">libabigail</a> to write a tool named
-fedabipkgdiff. That came from a cool idea of Dodji Seketeli who is the author
-of libabigail and is built on top of the powerful libabigail framework. Just
-imagine, if you are a Fedora developer or packager, when you want to ensure
-the new version software is ABI-compatible with previous version or versions,
-how would you do that? If there are already built builds in Koji, if you want
-to see what ABI differences they have, then how to do that? fedabipkgdiff is
-able to make your life easier.</p>
-
-<p>fedabipkgdiff is designed to be as smart as possible to find necessary RPMs
-from local or Koji, and run ABI check automatically on behalf of you. All you
-need to do is just to specify</p>
-
-<ul>
-<li>from where to find RPMs, which defaults to Koji obviously</li>
-<li>what RPMs are needed, to select RPMs from latest build of a distribution
-such as Fedora 24, 25, or from a specific build with <code>N-V-R</code> such as
-<code>httpd-2.4.23-4.fc24</code></li>
-<li>how RPMs will be compared, that means you have a chance to let fedabipkgdiff
-do not compare with development package, you can also tell it to compare
-without loading suppression file</li>
-</ul>
-
-
-<p>Okay, now I'll show you some examples to see what fedabipkgdiff can do.</p>
-
-<p>First, I want to compare package httpd selected from latest build built for
-Fedora 24 and 25. Run this command</p>
-
-<pre>
-fedabipkgdiff --from 24 --to 25 httpd
-</pre>
-
-
-<p>You will get</p>
-
-<pre>
-Comparing the ABI of binaries between httpd-2.4.23-4.fc23.armv7hl.rpm and httpd-2.4.23-4.fc24.armv7hl.rpm:
-
-================ changes of 'httpd'===============
-  Functions changes summary: 0 Removed, 1 Changed (224 filtered out), 0 Added function
-  Variables changes summary: 0 Removed, 0 Changed (10 filtered out), 0 Added variable
-
-  1 function with some indirect sub-type change:
-
-    [C]'function void ap_add_file_conf(apr_pool_t*, core_dir_config*, void*)' at core.c:572:1 has some indirect sub-type changes:
-      parameter 2 of type 'core_dir_config*' has sub-type changes:
-        in pointed to type 'typedef core_dir_config' at http_core.h:675:1:
-          underlying type 'struct __anonymous_struct__' at http_core.h:518:1 changed:
-            3 data member changes:
-             'unsigned int __anonymous_struct__::d_is_fnmatch' offset changed from 192 to 200 (in bits)
-             'unsigned int __anonymous_struct__::add_default_charset' offset changed from 192 to 200 (in bits)
-             'unsigned int __anonymous_struct__::condition_ifelse' offset changed from 864 to 872 (in bits)
-
-
-================ end of changes of 'httpd'===============
-
-================ changes of 'mod_cache.so'===============
-  Functions changes summary: 0 Removed, 1 Changed (17 filtered out), 0 Added function
-  Variables changes summary: 0 Removed, 0 Changed, 0 Added variable
-
-  1 function with some indirect sub-type change:
-
-    [C]'function int ap_cache_control(request_rec*, cache_control_t*, const char*, const char*, apr_table_t*)' at cache_util.c:965:1 has some indirect sub-type changes:
-      parameter 2 of type 'cache_control_t*' has sub-type changes:
-        in pointed to type 'typedef cache_control_t' at cache_common.h:53:1:
-          underlying type 'struct cache_control' at cache_common.h:30:1 changed:
-            10 data member changes:
-             'unsigned int cache_control::public' offset changed from 0 to 8 (in bits)
-             'unsigned int cache_control::only_if_cached' offset changed from 0 to 8 (in bits)
-             'unsigned int cache_control::s_maxage' offset changed from 0 to 16 (in bits)
-             'unsigned int cache_control::private_header' offset changed from 0 to 8 (in bits)
-             'unsigned int cache_control::must_revalidate' offset changed from 0 to 8 (in bits)
-             'unsigned int cache_control::no_transform' offset changed from 0 to 8 (in bits)
-             'unsigned int cache_control::private' offset changed from 0 to 8 (in bits)
-             'unsigned int cache_control::proxy_revalidate' offset changed from 0 to 8 (in bits)
-             'unsigned int cache_control::min_fresh' offset changed from 0 to 8 (in bits)
-             'unsigned int cache_control::invalidated' offset changed from 0 to 16 (in bits)
-
-
-================ end of changes of 'mod_cache.so'===============
-
-================ changes of 'mod_dav_fs.so'===============
-  Functions changes summary: 0 Removed, 1 Changed (6 filtered out), 0 Added function
-  Variables changes summary: 0 Removed, 0 Changed (2 filtered out), 0 Added variable
-
-  1 function with some indirect sub-type change:
-
-    [C]'function dav_error* dav_fs_dir_file_name(const dav_resource*, const char**, const char**)' at repos.c:237:1 has some indirect sub-type changes:
-      parameter 1 of type 'const dav_resource*' has sub-type changes:
-        in pointed to type 'const dav_resource':
-          in unqualified underlying type 'typedef dav_resource' at mod_dav.h:402:1:
-            underlying type 'struct dav_resource' at mod_dav.h:368:1 changed:
-...
-
-================ end of changes of 'mod_dav_fs.so'===============
-
-================ changes of 'mod_dav_lock.so'===============
-  Functions changes summary: 0 Removed, 0 Changed (1 filtered out), 0 Added function
-  Variables changes summary: 0 Removed, 1 Changed, 0 Added variable
-
-  1 Changed variable:
-
-    [C]'const dav_hooks_locks dav_hooks_locks_generic' was changed at locks.c:202:1:
-      type of variable changed:
-       in unqualified underlying type 'typedef dav_hooks_locks' at mod_dav.h:249:1:
-         underlying type 'struct dav_hooks_locks' at mod_dav.h:1314:1 changed:
-           1 data member changes (11 filtered):
-            type of 'dav_error* (dav_lockdb*, const dav_resource*, int, const dav_lock*)* dav_hooks_locks::append_locks' changed:
-              in pointed to type 'function type dav_error* (dav_lockdb*, const dav_resource*, int, const dav_lock*)':
-...
-
-================ end of changes of 'mod_dav_lock.so'===============
-
-================ changes of 'mod_proxy.so'===============
-  Functions changes summary: 0 Removed, 1 Changed (51 filtered out), 0 Added function
-  Variables changes summary: 0 Removed, 0 Changed, 0 Added variable
-
-  1 function with some indirect sub-type change:
-
-    [C]'function int ap_proxy_acquire_connection(const char*, proxy_conn_rec**, proxy_worker*, server_rec*)' at proxy_util.c:2114:1 has some indirect sub-type changes:
-      parameter 2 of type 'proxy_conn_rec**' has sub-type changes:
-        in pointed to type 'proxy_conn_rec*':
-          in pointed to type 'typedef proxy_conn_rec' at mod_proxy.h:274:1:
-            underlying type 'struct __anonymous_struct__' at mod_proxy.h:253:1 changed:
-              5 data member changes (2 filtered):
-               type of 'proxy_worker* __anonymous_struct__::worker' changed:
-                 in pointed to type 'typedef proxy_worker' at mod_proxy.h:109:1:
-...
-
-================ end of changes of 'mod_proxy.so'===============
-
-================ changes of 'mod_proxy_ajp.so'===============
-  Functions changes summary: 0 Removed, 1 Changed (7 filtered out), 0 Added function
-  Variables changes summary: 0 Removed, 0 Changed, 0 Added variable
-
-  1 function with some indirect sub-type change:
-
-    [C]'function apr_status_t ajp_parse_header(request_rec*, proxy_dir_conf*, ajp_msg_t*)' at ajp_header.c:763:1 has some indirect sub-type changes:
-      parameter 2 of type 'proxy_dir_conf*' has sub-type changes:
-        in pointed to type 'typedef proxy_dir_conf' at mod_proxy.h:242:1:
-          underlying type 'struct __anonymous_struct__' at mod_proxy.h:205:1 changed:
-            1 data member change:
-             type of 'proxy_alias* __anonymous_struct__::alias' changed:
-               in pointed to type 'struct proxy_alias' at mod_proxy.h:126:1:
-                 1 data member change:
-...
-
-================ end of changes of 'mod_proxy_ajp.so'===============
-</pre>
-
-
-<p>The output from fedabipkgdiff has a regular format. For each section of
-comparison between versions of RPMs, fedabipkgdiff displays ABI difference of
-each binary one by one. As shown above, its format follows.</p>
-
-<pre>
-Comparing the ABI of binaries between foo-N-V-R.A.rpm and httpd-N-V-R.A.rpm:
-
-================ changes of 'binary name'===============
-
-  { summar lines }
-
-  { a list of changed functions with details }
-
-================ end of changes of 'httpd'===============
-</pre>
-
-
-<p>Second, I want to compare package httpd from two builds with specific <code>N-V-R</code>
-rather than the latest one. Run this command</p>
-
-<pre>
-fedabipkgdiff httpd-2.4.23-3.fc23 httpd-2.4.23-3.fc24
-</pre>
-
-
-<p>As a result, you will ABI differences in similar format like above. This
-command compares all RPMs with all arches.</p>
-
-<p>Furthermore, if it is just necessary to compare RPMs with arch <code>x86_64</code>, I
-can do in this way,</p>
-
-<pre>
-fedabipkgdiff httpd-2.4.23-3.fc23.x86_64 httpd-2.4.23-3.fc24.x86_64
-</pre>
-
-
-<p>fedabipkgdiff is trying to compare ABI of binaries as smart as possible for
-Fedora developers and packagers. Besides what I have shown to you above, you
-can do more with fedabipkgdiff by specifying various options. For more
-details, please refer to <a href="https://sourceware.org/libabigail/manual/fedabipkgdiff.html">official
-manual</a>, or <code>man
-fedabipkgdiff</code>.</p>
- ]]></description>
+        <title>{{ post.title }}</title>
+        <author>{{ site.email }}</author>
+        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
+        <link>{{ site.url }}{{ post.url }}</link>
+        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <comments>{{ site.url }}{{ post.url }}#comments</comments>
+        <description><![CDATA[ {{ post.content }} ]]></description>
       </item>
-      
-      <item>
-        <title>如何在Fedora中运行BOINC</title>
-        <author>qcxhome@gmail.com</author>
-        <pubDate>Tue, 19 Aug 2014 17:00:10 CST</pubDate>
-        <link>http://tkdchen.me/blog/2014/08/19/how-to-run-boinc-in-fedora.html</link>
-        <guid isPermaLink="true">http://tkdchen.me/blog/2014/08/19/how-to-run-boinc-in-fedora.html</guid>
-        <comments>http://tkdchen.me/blog/2014/08/19/how-to-run-boinc-in-fedora.html#comments</comments>
-        <description><![CDATA[ <p>在<a href="http://fedoraproject.org/">Fedora</a>中运行<a href="http://boinc.berkeley.edu/">BOINC</a>有两个方法，可以从官方网站下载二进制安装包，然后在本地安装。</p>
-
-<p><figure class="highlight"><pre><code class="language-bash" data-lang="bash">sh boinc_7.2.42_x86_64-pc-linux-gnu.sh</code></pre></figure></p>
-
-<p>截至写这些文字的时候，<code>7.2.42</code>是最新的版本。有一点提示的是，安装过程会在执行此条命令的目录中创建
-BOINC子目录，所有必需的文件都将安装在这个目录中。</p>
-
-<p>然而，这第一种方法，我没有成功。在启动<code>boincmgr</code>总是出现程序库错误，无法运行。此时，就需要另外
-一种，BOINC的Wiki中也记载的方式。即使用特定的Linux发行版本的包管理器安装。</p>
-
-<p>对于Fedora，使用下面的命令。</p>
-
-<p><figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo yum install boinc-client boinc-manager</code></pre></figure></p>
-
-<p>BOINC管理器允许管理多台计算机上的boinc计算进程。首次启动管理器后，需要手动地连接到某一台计算机上。步骤如下，</p>
-
-<ol>
-<li>通过菜单进入计算机选择对话框 <code>Advanced -&gt; Select Computer</code></li>
-<li>在<code>Host name</code>中，输入<code>127.0.0.1</code>。</li>
-<li>以root用户身份打开文件<code>/var/lib/boinc/gui_rpc_auth.cfg</code>，将其中地完整内容拷贝到<code>Password</code>。</li>
-</ol>
-
-
-<p>如果已经添加了至少一个分布式计算项目，你将会看到类似如下图所示的界面。</p>
-
-<p><img src="/images/blog/boinc-sample.png" alt="BOINC Manager Sample" /></p>
- ]]></description>
-      </item>
-      
+      {% endfor %}
    </channel>
 </rss>
