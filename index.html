@@ -61,6 +61,41 @@
 			<section>
 				<div class="container">
 <div class="post-section">
+	<h1><a href="/blog/2016/08/18/fix-permission-denied-when-access-mounted-volume-inside-container.html">Fix Permission Denied when access mounted volume inside container</a></h1>
+	<p>I'm using Fedora 23 and also usually use docker to run a Fedora container so
+that I can have a ready-to-use environment quickly to run something, for example
+verifying a RPM by installing it simply. Volume is a much useful for sharing
+data between host and container, but without some magic, mounted volume inside
+container is not accessible, that is Permission Denied even if just <code>ls</code>.</p>
+
+<p>This is related to the SELinux actually. I'm not a SELinux expert. I can't give
+any deeper explanation why this happens. All what I knew and learned is from
+this great article <a href="http://www.projectatomic.io/blog/2015/06/using-volumes-with-docker-can-cause-problems-with-selinux/">Using Volumes with Docker can Cause Problems with SELinux</a>.
+The solution is to add suffix either <code>z</code> or <code>Z</code>. For example,</p>
+
+<pre><code>docker run --rm -i -t -v /path/to/host/dir:/path/to/container/dir:Z fedora:24 /bin/bash
+</code></pre>
+
+<p><a href="https://docs.docker.com/engine/tutorials/dockervolumes/#/volume-labels">Volume Labels</a>
+actually already describes the functionality of Z. But, it
+mentions nothing that is related to this issue and SELinux. I suspect, in
+Docker's documentation, Z is described in general for kinds of Linux
+distributions including those that don't use SELinux at all. Anyway, hopefully,
+this is useful for you to solve your problem. Happy hacking! :)</p>
+
+	<p class="read-more"><a href="/blog/2016/08/18/fix-permission-denied-when-access-mounted-volume-inside-container.html">Read More ...</a></p>
+	<p class="post-footer">
+		Written on: 18 Aug 2016
+		<a href="/blog/2016/08/18/fix-permission-denied-when-access-mounted-volume-inside-container.html#comments">Comments</a> Tags:
+		
+		<a href="/tags.html#Fedora">Fedora</a>
+		
+		<a href="/tags.html#Docker">Docker</a>
+		
+	</p>
+</div>
+
+<div class="post-section">
 	<h1><a href="/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html">Ensure ABI compliance with fedabipkgdiff</a></h1>
 	<p>In the past days, I have been hacking on
 <a href="https://sourceware.org/libabigail/">libabigail</a> to write a tool named

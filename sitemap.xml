@@ -4,7 +4,9 @@
         <loc>http://tkdchen.github.io/</loc>
         
         
-        <lastmod>2016-08-03T00:00:00+08:00</lastmod>
+        <lastmod>2016-08-18T00:00:00+08:00</lastmod>
+        
+        
         
         
         
@@ -50,6 +52,13 @@
 
     
 
+    
+    <url>
+        <loc>http://tkdchen.github.io/blog/2016/08/18/fix-permission-denied-when-access-mounted-volume-inside-container.html</loc>
+        <lastmod>2016-08-18T00:00:00+08:00</lastmod>
+        
+        <changefreq>daily</changefreq>
+    </url>
     
     <url>
         <loc>http://tkdchen.github.io/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html</loc>
