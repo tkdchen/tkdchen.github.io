@@ -61,25 +61,46 @@
 			<section>
 				<div class="container"><div class="post-section">
 	<div class="post-main-body">
-	<h1>rejectUnauthorized的默认值变了</h1>
-	<p>这个变化发生在0.9.2版本中。下面的代码片段摘录自<a href="https://github.com/joyent/node/blob/v0.9.2-release/lib/tls.js">tls.js</a></p>
+	<h1>Install VBoxGuestAdditions in RPM based Vagrant Guest</h1>
+	<p><figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">function</span> install_vb_additions
+<span class="o">{</span>
+    <span class="nb">local </span><span class="nv">VB_VERSION</span><span class="o">=</span><span class="s2">&quot;$1&quot;</span><span class="p">;</span>
+    <span class="nb">local </span><span class="nv">download_url</span><span class="o">=</span>http://download.virtualbox.org/virtualbox/<span class="k">${</span><span class="nv">VB_VERSION</span><span class="k">}</span>/VBoxGuestAdditions<em><span class="k">${</span><span class="nv">VB_VERSION</span><span class="k">}</span>.iso
+    curl -C - -O <span class="nv">$download_url</span>
+    sudo mkdir /mnt/iso
+    sudo mount -o loop VBoxGuestAdditions</em><span class="k">${</span><span class="nv">VB_VERSION</span><span class="k">}</span>.iso /mnt/iso
+    sudo yum install -y kernel-devel-<span class="se">`</span>uname -r<span class="se">`</span> gcc make perl bzip2
+    <span class="nb">pushd</span> /mnt/iso
+    sudo ./VBoxLinuxAdditions.run
+    <span class="nb">popd</span>
+<span class="nb">    </span>sudo umount /mnt/iso
+<span class="o">}</span></code></pre></figure></p>
 
-<p><figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">rejectUnauthorized</span><span class="o">:</span> <span class="s1">&#39;0&#39;</span> <span class="o">!==</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_TLS_REJECT_UNAUTHORIZED</span>
-<span class="p">};</span></code></pre></figure></p>
+<h1>How to use</h1>
 
-<p>从与<a href="https://github.com/joyent/node/blob/v0.9.1-release/lib/tls.js">0.9.1</a>版本的对比来看，在新版本中，允许使用环境变量来控制参数<code>rejectUnauthorized</code>。上面的代码则使得默认值从<code>false</code>变更为<code>true</code>。在tls模块的文档中记录了这个变化，遗憾的是Node的Changelog则没有记录。</p>
+<h2>Get version of VirtualBox</h2>
 
-<p>为了确保代码能够在Node的各个版本间保持兼容性，在<code>options</code>参数中明确地给<code>rejectUnauthorized</code>设置所期望的值，而不使用默认值。</p>
+<pre><code>VBoxManager --version
+</code></pre>
+
+<h2>Steps to install VBoxGuestAdditions</h2>
+
+<p>Let's assume version of VirtualBox is <code>5.0.12</code>.</p>
+
+<p><figure class="highlight"><pre><code class="language-bash" data-lang="bash">vagrant ssh
+<span class="c"># Paste function install_vb_additions in shell</span>
+install_vb_additions 5.0.12
+<span class="nb">exit</span>
+vagrant reload</code></pre></figure></p>
 
 	</div>
 	<div class="post-footer">
-		<p>Written on: 19 Jun 2013</p>
+		<p>Written on: 18 Aug 2016</p>
 		<p>Tags:
 		
-		<a href="/tags.html#Node">Node</a>
+		<a href="/tags.html#Vagrant">Vagrant</a>
 		
-		<a href="/tags.html#TLS">TLS</a>
+		<a href="/tags.html#VirtualBox">VirtualBox</a>
 		
 		</p>
 		<div class="share-section">

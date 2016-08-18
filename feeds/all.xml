@@ -15,6 +15,46 @@
       <webMaster>qcxhome@gmail.com (Chenxiong Qi)</webMaster>
       
       <item>
+        <title>Install VBoxGuestAdditions in RPM based Vagrant Guest</title>
+        <author>qcxhome@gmail.com</author>
+        <pubDate>Thu, 18 Aug 2016 00:00:00 CST</pubDate>
+        <link>http://tkdchen.github.io/scripts/2016/08/18/install-VBoxGuestAdditions-in-rpm-based-vagrant-guest.html</link>
+        <guid isPermaLink="true">http://tkdchen.github.io/scripts/2016/08/18/install-VBoxGuestAdditions-in-rpm-based-vagrant-guest.html</guid>
+        <comments>http://tkdchen.github.io/scripts/2016/08/18/install-VBoxGuestAdditions-in-rpm-based-vagrant-guest.html#comments</comments>
+        <description><![CDATA[ <p><figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">function</span> install_vb_additions
+<span class="o">{</span>
+    <span class="nb">local </span><span class="nv">VB_VERSION</span><span class="o">=</span><span class="s2">&quot;$1&quot;</span><span class="p">;</span>
+    <span class="nb">local </span><span class="nv">download_url</span><span class="o">=</span>http://download.virtualbox.org/virtualbox/<span class="k">${</span><span class="nv">VB_VERSION</span><span class="k">}</span>/VBoxGuestAdditions<em><span class="k">${</span><span class="nv">VB_VERSION</span><span class="k">}</span>.iso
+    curl -C - -O <span class="nv">$download_url</span>
+    sudo mkdir /mnt/iso
+    sudo mount -o loop VBoxGuestAdditions</em><span class="k">${</span><span class="nv">VB_VERSION</span><span class="k">}</span>.iso /mnt/iso
+    sudo yum install -y kernel-devel-<span class="se">`</span>uname -r<span class="se">`</span> gcc make perl bzip2
+    <span class="nb">pushd</span> /mnt/iso
+    sudo ./VBoxLinuxAdditions.run
+    <span class="nb">popd</span>
+<span class="nb">    </span>sudo umount /mnt/iso
+<span class="o">}</span></code></pre></figure></p>
+
+<h1>How to use</h1>
+
+<h2>Get version of VirtualBox</h2>
+
+<pre><code>VBoxManager --version
+</code></pre>
+
+<h2>Steps to install VBoxGuestAdditions</h2>
+
+<p>Let's assume version of VirtualBox is <code>5.0.12</code>.</p>
+
+<p><figure class="highlight"><pre><code class="language-bash" data-lang="bash">vagrant ssh
+<span class="c"># Paste function install_vb_additions in shell</span>
+install_vb_additions 5.0.12
+<span class="nb">exit</span>
+vagrant reload</code></pre></figure></p>
+ ]]></description>
+      </item>
+      
+      <item>
         <title>Fix Permission Denied when access mounted volume inside container</title>
         <author>qcxhome@gmail.com</author>
         <pubDate>Thu, 18 Aug 2016 00:00:00 CST</pubDate>
