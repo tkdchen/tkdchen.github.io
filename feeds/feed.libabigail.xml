@@ -2,7 +2,7 @@
 <rss version="2.0">
    <channel>
       <title>Chenxiong Qi's personal site</title>
-      <link>http://tkdchen.me</link>
+      <link>http://tkdchen.github.io</link>
       <description>My personal site recording my life path</description>
       <language>zh-CN</language>
       <copyright>Copyright 2014, Chenxiong Qi</copyright>
@@ -18,9 +18,9 @@
         <title>Ensure ABI compliance with fedabipkgdiff</title>
         <author>qcxhome@gmail.com</author>
         <pubDate>Wed, 03 Aug 2016 00:00:00 CST</pubDate>
-        <link>http://tkdchen.me/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html</link>
-        <guid isPermaLink="true">http://tkdchen.me/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html</guid>
-        <comments>http://tkdchen.me/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html#comments</comments>
+        <link>http://tkdchen.github.io/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html</link>
+        <guid isPermaLink="true">http://tkdchen.github.io/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html</guid>
+        <comments>http://tkdchen.github.io/blog/2016/08/03/ensure-ABI-compliance-with-fedabipkgdiff.html#comments</comments>
         <description><![CDATA[ <p>In the past days, I have been hacking on
 <a href="https://sourceware.org/libabigail/">libabigail</a> to write a tool named
 fedabipkgdiff. That came from a cool idea of Dodji Seketeli who is the author

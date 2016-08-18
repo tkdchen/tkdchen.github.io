@@ -2,7 +2,7 @@
 <rss version="2.0">
    <channel>
       <title>Chenxiong Qi's personal site</title>
-      <link>http://tkdchen.me</link>
+      <link>http://tkdchen.github.io</link>
       <description>My personal site recording my life path</description>
       <language>zh-CN</language>
       <copyright>Copyright 2014, Chenxiong Qi</copyright>
@@ -18,9 +18,9 @@
         <title>Firefox的GNOME3皮肤很棒</title>
         <author>qcxhome@gmail.com</author>
         <pubDate>Sat, 04 Oct 2014 20:11:07 CST</pubDate>
-        <link>http://tkdchen.me/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html</link>
-        <guid isPermaLink="true">http://tkdchen.me/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html</guid>
-        <comments>http://tkdchen.me/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html#comments</comments>
+        <link>http://tkdchen.github.io/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html</link>
+        <guid isPermaLink="true">http://tkdchen.github.io/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html</guid>
+        <comments>http://tkdchen.github.io/blog/2014/10/04/firefox-gnome-3-theme-is-awesome.html#comments</comments>
         <description><![CDATA[ <p>自Firefox 29采用了新的界面设计后，很多人都吐槽这个酷似Chrome，但又不像的新设计。
 我也是其中一员。尽管用了一段时间以后，逐渐适应了新风格，但仍旧时常感觉不爽。很怀念
 之前的标签风格。偶然间，发现了一个新皮肤<a href="https://addons.mozilla.org/en-us/firefox/addon/adwaita/">GNOME 3</a>。
@@ -40,9 +40,9 @@
         <title>GTG的Bugzilla插件被重新实现为同步服务了</title>
         <author>qcxhome@gmail.com</author>
         <pubDate>Mon, 15 Sep 2014 04:48:20 CST</pubDate>
-        <link>http://tkdchen.me/blog/2014/09/15/bugzilla-is-reimplemented-to-a-synchronization-service.html</link>
-        <guid isPermaLink="true">http://tkdchen.me/blog/2014/09/15/bugzilla-is-reimplemented-to-a-synchronization-service.html</guid>
-        <comments>http://tkdchen.me/blog/2014/09/15/bugzilla-is-reimplemented-to-a-synchronization-service.html#comments</comments>
+        <link>http://tkdchen.github.io/blog/2014/09/15/bugzilla-is-reimplemented-to-a-synchronization-service.html</link>
+        <guid isPermaLink="true">http://tkdchen.github.io/blog/2014/09/15/bugzilla-is-reimplemented-to-a-synchronization-service.html</guid>
+        <comments>http://tkdchen.github.io/blog/2014/09/15/bugzilla-is-reimplemented-to-a-synchronization-service.html#comments</comments>
         <description><![CDATA[ <p>最近，完成了对Bugzilla插件的重写，重新实现为GTG的同步服务（Synchronization Service）。不得而知是何原因需要做这个转换。
 您可以从<a href="https://bugs.launchpad.net/gtg/+bug/494967">Bug 494967</a>略之一二。</p>
 
